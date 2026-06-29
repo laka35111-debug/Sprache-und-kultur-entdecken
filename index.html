@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sprache und Kultur entdecken</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#0b2345;
+}
+
+header{
+background:#082344;
+color:white;
+padding:20px 60px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+header h1{
+font-size:28px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+.hero{
+max-width:1200px;
+margin:auto;
+padding:80px 30px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:50px;
+}
+
+.hero img{
+width:330px;
+border-radius:18px;
+box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
+
+.hero-text h2{
+font-size:58px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-text p{
+font-size:20px;
+color:#555;
+margin-bottom:35px;
+}
+
+.button{
+background:#0B63F6;
+color:white;
+padding:15px 35px;
+border-radius:40px;
+text-decoration:none;
+font-weight:600;
+}
+
+.units{
+max-width:1200px;
+margin:auto;
+padding:30px;
+}
+
+.units h2{
+text-align:center;
+font-size:42px;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:20px;
+padding:35px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
+text-decoration:none;
+color:#0b2345;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:10px;
+}
+
+.card p{
+color:#666;
+}
+
+footer{
+background:#082344;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:80px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>📘 Sprache und Kultur entdecken</h1>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Über das Buch</a>
+<a href="#">Kontakt</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<img src="images/book.png">
+
+<div class="hero-text">
+
+<h2>Deutsch A1–A2<br>Audio Companion</h2>
+
+<p>
+Scanne den QR-Code in deinem Buch oder wähle eine Einheit aus.
+</p>
+
+<a class="button" href="#units">
+Jetzt starten
+</a>
+
+</div>
+
+</section>
+
+<section class="units" id="units">
+
+<h2>Alle Einheiten</h2>
+
+<div class="grid">
+
+<a class="card" href="einheit1.html">
+<h3>🎧 Einheit 1</h3>
+<p>Begrüßung</p>
+</a>
+
+<a class="card" href="einheit2.html">
+<h3>🎧 Einheit 2</h3>
+<p>Familie</p>
+</a>
+
+<a class="card" href="einheit3.html">
+<h3>🎧 Einheit 3</h3>
+<p>Zuhause</p>
+</a>
+
+<a class="card" href="einheit4.html">
+<h3>🎧 Einheit 4</h3>
+<p>Schule</p>
+</a>
+
+<a class="card" href="einheit5.html">
+<h3>🎧 Einheit 5</h3>
+<p>Freizeit</p>
+</a>
+
+<a class="card" href="einheit6.html">
+<h3>🎧 Einheit 6</h3>
+<p>Einkaufen</p>
+</a>
+
+<a class="card" href="einheit7.html">
+<h3>🎧 Einheit 7</h3>
+<p>...</p>
+</a>
+
+<a class="card" href="einheit8.html">
+<h3>🎧 Einheit 8</h3>
+<p>...</p>
+</a>
+
+<a class="card" href="einheit9.html">
+<h3>🎧 Einheit 9</h3>
+<p>...</p>
+</a>
+
+<a class="card" href="einheit10.html">
+<h3>🎧 Einheit 10</h3>
+<p>...</p>
+</a>
+
+<a class="card" href="einheit11.html">
+<h3>🎧 Einheit 11</h3>
+<p>...</p>
+</a>
+
+<a class="card" href="einheit12.html">
+<h3>🎧 Einheit 12</h3>
+<p>...</p>
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Sprache und Kultur entdecken
+
+</footer>
+
+</body>
+</html>
