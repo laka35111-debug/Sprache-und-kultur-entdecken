@@ -1,84 +1,147 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<section class="hero">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
 
-    <img ...>
-    <h1>Sprache und Kultur entdecken</h1>
-    <button>Jetzt starten</button>
+body{
+background:#f5f7fb;
+color:#0f172a;
+}
 
-</section>
-<title>Sprache und Kultur entdecken</title>
+/* TOP BAR */
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+background:white;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:10;
+}
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
+.logo{
+font-weight:700;
+color:#0B63F6;
+}
 
-<body>
+nav a{
+margin-left:20px;
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
 
-<header class="topbar">
-<div class="logo">📘 Sprache & Kultur</div>
-<nav>
-<a href="#units">Einheiten</a>
-<a href="#">Über das Buch</a>
-<a href="#">Kontakt</a>
-</nav>
-</header>
+/* HERO */
+.hero{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:70px 8%;
+gap:50px;
+}
 
-<section class="hero">
+.hero img{
+width:320px;
+border-radius:18px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
 
-<div class="hero-left">
-<img src="image.png" alt="Book Cover">
-</div>
+.hero-right h1{
+font-size:48px;
+margin-bottom:10px;
+}
 
-<div class="hero-right">
-<h1>Sprache und Kultur entdecken</h1>
-<p class="subtitle">Deutsch A1–A2 • Audio Companion</p>
+.subtitle{
+color:#0B63F6;
+font-weight:600;
+margin-bottom:15px;
+}
 
-<p class="desc">
-Lerne Deutsch Schritt für Schritt mit Hörtexten, Wortschatz und Dialogen.
-</p>
+.desc{
+color:#555;
+margin-bottom:25px;
+line-height:1.6;
+}
 
-<a class="btn" href="#units">Jetzt starten</a>
+.btn{
+display:inline-block;
+background:#0B63F6;
+color:white;
+padding:12px 26px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 10px 25px rgba(11,99,246,0.25);
+transition:0.3s;
+}
 
-<div class="stats">
-<div>📚 12 Einheiten</div>
-<div>🎧 48+ Audios</div>
-<div>🌍 A1–A2</div>
-</div>
+.btn:hover{
+transform:translateY(-2px);
+}
 
-</div>
+/* STATS */
+.stats{
+display:flex;
+gap:15px;
+margin-top:20px;
+font-size:14px;
+color:#444;
+}
 
-</section>
+/* UNITS */
+.units{
+padding:80px 8%;
+text-align:center;
+}
 
-<section id="units" class="units">
+.units h2{
+font-size:40px;
+margin-bottom:30px;
+}
 
-<h2>Alle Einheiten</h2>
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+}
 
-<div class="grid">
+.grid a{
+background:white;
+padding:20px;
+border-radius:15px;
+text-decoration:none;
+color:#0f172a;
+font-weight:600;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:0.3s;
+}
 
-<a href="einheit1.html">📖 Wortschatz</a>
-<a href="einheit2.html">🔢 Zahlen 0–12</a>
-<a href="einheit3.html">👨‍👩‍👧 Familie</a>
-<a href="einheit4.html">🏫 Schule & Fächer</a>
-<a href="einheit5.html">🍽 Essen & Trinken</a>
-<a href="einheit6.html">⚽ Hobbys</a>
-<a href="einheit7.html">🚌 Verkehr</a>
-<a href="einheit8.html">🎉 Feste</a>
-<a href="einheit9.html">🛒 Einkaufen</a>
-<a href="einheit10.html">📚 Wörter & Themen</a>
-<a href="einheit11.html">💻 Medien</a>
-<a href="einheit12.html">💬 Meinung</a>
+.grid a:hover{
+background:#0B63F6;
+color:white;
+transform:translateY(-5px);
+}
 
-</div>
+/* FOOTER */
+footer{
+text-align:center;
+padding:30px;
+background:#0f172a;
+color:white;
+margin-top:60px;
+}
 
-</section>
-
-<footer>
-© 2026 Arjin Talway • Sprache und Kultur entdecken
-</footer>
-
-</body>
-</html>
+/* MOBILE */
+@media(max-width:900px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.stats{
+justify-content:center;
+}
+}
