@@ -1,1 +1,1 @@
-# Sprache-und-kultur-entedcken
+# Sprache-und-kultur-entdecken
