@@ -173,3 +173,51 @@ nav{
 }
 
 }
+.icon{
+    font-size:42px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.card{
+    border-top:6px solid #0B63F6;
+}
+
+.blue{border-top-color:#2563eb;}
+.green{border-top-color:#16a34a;}
+.red{border-top-color:#dc2626;}
+.orange{border-top-color:#f59e0b;}
+.teal{border-top-color:#0891b2;}
+.purple{border-top-color:#7c3aed;}
+
+.card p{
+    margin-top:8px;
+    color:#666;
+    font-size:16px;
+}
+.icon{
+    font-size:42px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.card{
+    border-top:6px solid #0B63F6;
+}
+
+.blue{border-top-color:#2563eb;}
+.green{border-top-color:#16a34a;}
+.red{border-top-color:#dc2626;}
+.orange{border-top-color:#f59e0b;}
+.teal{border-top-color:#0891b2;}
+.purple{border-top-color:#7c3aed;}
+
+.card p{
+    margin-top:8px;
+    color:#666;
+    font-size:16px;
+}
+
+.card:hover p{
+    color:white;
+}
