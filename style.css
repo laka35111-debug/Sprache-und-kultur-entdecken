@@ -222,3 +222,45 @@ justify-content:center;
 
 </body>
 </html>
+/* ===== Animations ===== */
+
+.hero{
+    animation: fadeIn 1s ease;
+}
+
+.grid a{
+    transition: all 0.3s ease;
+}
+
+.grid a:hover{
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.audio-box{
+    transition: all 0.3s ease;
+}
+
+.audio-box:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.btn{
+    transition: all 0.3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
