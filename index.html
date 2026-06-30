@@ -1,113 +1,160 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sprache und Kultur entdecken</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/logo.png">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sprache und Kultur entdecken</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" href="images/logo.png">
+
 </head>
 
 <body>
 
 <header class="topbar">
-<div class="logo">
-    <img src="images/logo.png" alt="Sprache und Kultur entdecken">
-</div>
-</header>
 
+<div class="logo">
+<img src="images/logo.png" alt="Logo">
+</div>
+
+<nav>
+
+<a href="#">Startseite</a>
+<a href="#about">Über das Buch</a>
+<a href="#units">Einheiten</a>
+<a href="#contact">Kontakt</a>
+
+</nav>
+
+</header>
 
 <section class="hero">
 
-    <div class="hero-text">
-        <h1>Sprache und Kultur entdecken</h1>
+<div class="hero-text">
 
-        <p class="subtitle">
-            Deutsch A1–A2 • Audio Companion
-        </p>
+<h1>Sprache und Kultur entdecken</h1>
 
-        <p class="desc">
-            Willkommen! Diese Website begleitet das Lehrwerk
-            <strong>Sprache und Kultur entdecken</strong>.
-            Hier finden Sie alle Hörtexte zu den 12 Einheiten.
-        </p>
+<p class="subtitle">
+Deutsch A1–A2 • Audio Companion
+</p>
 
-        <a href="#units" class="btn">Jetzt starten</a>
-    </div>
+<p class="desc">
+Willkommen! Diese Website begleitet das Lehrwerk
+<b>Sprache und Kultur entdecken</b>.
+Hier finden Sie alle Hörtexte zu den zwölf Einheiten.
+</p>
 
-    <div class="hero-image">
-        <img src="images/image.png" alt="Sprache und Kultur entdecken">
-    </div>
+<a href="#units" class="btn">
+Jetzt starten
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/image.png"
+alt="Buchcover">
+
+</div>
 
 </section>
 
-<section class="about">
+<section class="about" id="about">
 
-    <h2>Über diese Website</h2>
+<h2>Über diese Website</h2>
 
-    <p>
-        Willkommen bei <strong>Sprache und Kultur entdecken</strong>.
-        Diese Website begleitet das Lehrwerk und bietet Hörtexte für alle 12 Einheiten.
-        Scannen Sie den QR-Code im Buch oder wählen Sie eine Einheit aus, um die Audios anzuhören.
-    </p>
+<p>
+
+Diese Website wurde als Audio-Begleitung zum Lehrwerk
+<b>Sprache und Kultur entdecken</b>
+entwickelt.
+
+Scannen Sie den QR-Code im Buch oder wählen Sie
+eine Einheit aus.
+
+</p>
 
 </section>
 
 <section class="stats">
 
-    <div class="stat">
-        <h3>12</h3>
-        <p>Einheiten</p>
-    </div>
+<div class="stat">
+<h3>12</h3>
+<p>Einheiten</p>
+</div>
 
-    <div class="stat">
-        <h3>48+</h3>
-        <p>Audios</p>
-    </div>
+<div class="stat">
+<h3>48+</h3>
+<p>Audios</p>
+</div>
 
-    <div class="stat">
-        <h3>A1–A2</h3>
-        <p>Niveau</p>
-    </div>
-
-</section>
-
-<section id="units" class="units">
-
-<h2>📚 Alle Einheiten</h2>
-
-<input
-type="text"
-id="searchBox"
-placeholder="🔍 Einheit suchen..."
-onkeyup="searchUnits()">
-
-<div class="grid">
-
-<a href="einheit1.html">📖 Wortschatz</a>
-<a href="einheit2.html">🔢 Zahlen 0–12</a>
-<a href="einheit3.html">👨‍👩‍👧 Familie</a>
-<a href="einheit4.html">🏫 Schule & Fächer</a>
-<a href="einheit5.html">🍽️ Essen & Trinken</a>
-<a href="einheit6.html">⚽ Hobbys</a>
-<a href="einheit7.html">🚌 Unterwegs & Verkehr</a>
-<a href="einheit8.html">🎉 Das Fest</a>
-<a href="einheit9.html">🛒 Einkaufen</a>
-<a href="einheit10.html">📚 Wörter & Themen</a>
-<a href="einheit11.html">💻 Medien & Technologie</a>
-<a href="einheit12.html">💬 Meinung & Diskussion</a>
-
+<div class="stat">
+<h3>A1–A2</h3>
+<p>Niveau</p>
 </div>
 
 </section>
 
-<footer>
+<section id="units">
 
-<p><strong>Sprache und Kultur entdecken</strong></p>
+<h2 class="section-title">
+Alle Einheiten
+</h2>
 
-<p>Deutsch A1–A2 Audio Companion</p>
+<input
+type="text"
+id="searchBox"
+placeholder="Einheit suchen..."
+onkeyup="searchUnits()">
 
-<p>© 2026 All Rights Reserved</p>
+<div class="grid">
+
+<a href="einheit1.html">📖 Einheit 1 – Wortschatz</a>
+
+<a href="einheit2.html">🔢 Einheit 2 – Zahlen 0–12</a>
+
+<a href="einheit3.html">👨‍👩‍👧 Einheit 3 – Familie</a>
+
+<a href="einheit4.html">🏫 Einheit 4 – Schule & Fächer</a>
+
+<a href="einheit5.html">🍽️ Einheit 5 – Essen & Trinken</a>
+
+<a href="einheit6.html">⚽ Einheit 6 – Das Hobby</a>
+
+<a href="einheit7.html">🚌 Einheit 7 – Unterwegs & Verkehr</a>
+
+<a href="einheit8.html">🎉 Einheit 8 – Das Fest</a>
+
+<a href="einheit9.html">🛒 Einheit 9 – Einkaufen</a>
+
+<a href="einheit10.html">📚 Einheit 10 – Wörter & Themen</a>
+
+<a href="einheit11.html">💻 Einheit 11 – Medien & Technologie</a>
+
+<a href="einheit12.html">💬 Einheit 12 – Meinung & Diskussion</a>
+
+</div>
+
+</section>
+<footer id="contact">
+
+    <h2>Kontakt</h2>
+
+    <p>
+        Sprache und Kultur entdecken
+    </p>
+
+    <p>
+        Deutsch A1–A2 Audio Companion
+    </p>
+
+    <p>
+        © 2026 Alle Rechte vorbehalten
+    </p>
 
 </footer>
 
