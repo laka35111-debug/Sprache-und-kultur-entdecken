@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Sprache und Kultur entdecken</title>
-
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprache und Kultur entdecken</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- TOP BAR -->
 <header class="topbar">
-<div class="logo">📘 Sprache & Kultur</div>
-
-<nav>
-<a href="#units">Einheiten</a>
-<a href="#">Über das Buch</a>
-<a href="#">Kontakt</a>
-</nav>
+    <div class="logo">📘 Sprache und Kultur entdecken</div>
 </header>
 
-<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-text">
+
+        <h1>Sprache und Kultur entdecken</h1>
+
+        <p class="subtitle">
+            Deutsch A1–A2 • Audio Companion
+        </p>
+
+        <p class="desc">
+            Lerne Deutsch Schritt für Schritt mit Hörtexten, Wortschatz und Dialogen.
+        </p>
+
+        <a href="#units" class="btn">Jetzt starten</a>
+
+    </div>
+
+</section>
+
 <section class="about">
 
     <h2>Über diese Website</h2>
@@ -38,8 +45,6 @@
 
 </section>
 
-<!-- UNITS -->
-<section id="units" class="units">
 <section class="stats">
 
     <div class="stat">
@@ -58,8 +63,17 @@
     </div>
 
 </section>
-<h2>Alle Einheiten</h2>
-<input type="text" id="searchBox" placeholder="🔍 Einheit suchen..." onkeyup="searchUnits()">
+
+<section id="units" class="units">
+
+<h2>📚 Alle Einheiten</h2>
+
+<input
+type="text"
+id="searchBox"
+placeholder="🔍 Einheit suchen..."
+onkeyup="searchUnits()">
+
 <div class="grid">
 
 <a href="einheit1.html">📖 Wortschatz</a>
@@ -76,16 +90,20 @@
 <a href="einheit12.html">💬 Meinung & Diskussion</a>
 
 </div>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
-© 2026 Arjin Talway • Sprache und Kultur entdecken
+
+<p><strong>Sprache und Kultur entdecken</strong></p>
+
+<p>Deutsch A1–A2 Audio Companion</p>
+
+<p>© 2026 All Rights Reserved</p>
+
 </footer>
+
 <script src="script.js"></script>
-  <footer>
-    <p>© 2026 Sprache und Kultur entdecken</p>
-    <p>Deutsch A1–A2 Audio Companion</p>
-</footer>
+
 </body>
 </html>
