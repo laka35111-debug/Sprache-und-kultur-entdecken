@@ -40,24 +40,20 @@ nav{
     height:80px;
 }
 
-.logo img{
-    height:55px;
-}
-
-.nav-links{
-    display:flex;
-    gap:25px;
-    list-style:none;
-}
-
 .nav-links a{
-    color:white;
-    text-decoration:none;
     font-weight:500;
+    transition:0.3s;
 }
 
 .nav-links a:hover{
     color:#f6c343;
+    transform:translateY(-2px);
+}
+
+.logo img{
+    height:55px;
+}
+
 }
 
 .nav-buttons{
@@ -78,8 +74,9 @@ nav{
 
 .hero{
     height:100vh;
-    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
-    url("images/hero-bg.png");
+    background:
+    linear-gradient(rgba(15,76,129,0.75), rgba(15,76,129,0.75)),
+    url("images/image.png");
     background-size:cover;
     background-position:center;
     display:flex;
@@ -91,8 +88,8 @@ nav{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:60px;
 }
-
 .hero-text{
     max-width:550px;
 }
@@ -140,8 +137,9 @@ nav{
 }
 
 .hero-image img{
-    width:320px;
-    border-radius:15px;
+    width:380px;
+    border-radius:20px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.3);
 }
 /* =========================
    FEATURES SECTION
