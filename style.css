@@ -329,3 +329,14 @@ h1{
     border:1px solid #ddd;
     font-size:16px;
 }
+footer{
+    margin-top:60px;
+    background:#1f2937;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+}
+
+footer p{
+    margin:5px 0;
+}
