@@ -347,3 +347,36 @@ footer p{
     line-height:1.7;
     margin:20px 0 35px;
 }
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    margin:60px auto;
+    flex-wrap:wrap;
+}
+
+.stat{
+    background:white;
+    width:220px;
+    padding:30px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.stat:hover{
+    transform:translateY(-8px);
+}
+
+.stat h3{
+    font-size:42px;
+    color:#2563eb;
+    margin:0;
+}
+
+.stat p{
+    color:#666;
+    margin-top:10px;
+    font-size:18px;
+}
