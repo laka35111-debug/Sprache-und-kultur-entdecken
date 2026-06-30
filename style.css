@@ -111,15 +111,22 @@ gap:15px;
 }
 
 .grid a{
-    background:white;
-    padding:20px;
-    border-radius:18px;
-    text-decoration:none;
-    color:#1f2937;
-    font-weight:600;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
-    border:1px solid #e5e7eb;
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    text-decoration: none;
+    color: #1f2937;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+}
+
+.grid a:hover{
+    transform: translateY(-8px);
+    background: #2563eb;
+    color: white;
 }
 
 .grid a:hover{
