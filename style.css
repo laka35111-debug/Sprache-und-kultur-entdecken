@@ -261,11 +261,21 @@ justify-content:center;
 }
 
 .btn{
-    transition: all 0.3s ease;
+    display:inline-block;
+    background:linear-gradient(135deg,#2563eb,#3b82f6);
+    color:white;
+    padding:14px 32px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:16px;
+    box-shadow:0 10px 25px rgba(37,99,235,.3);
+    transition:all .3s ease;
 }
 
 .btn:hover{
-    transform: scale(1.05);
+    transform:translateY(-3px);
+    box-shadow:0 15px 35px rgba(37,99,235,.4);
 }
 
 @keyframes fadeIn{
