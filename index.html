@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 
 <meta charset="UTF-8">
@@ -11,153 +12,359 @@
 
 <link rel="icon" href="images/logo.png">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
-<header class="topbar">
+<!-- ================= NAVIGATION ================= -->
 
-<div class="logo">
-    <a href="index.html">
-        <img src="images/logo.png" alt="Sprache und Kultur entdecken">
-    </a>
-</div>
+<header>
+
+<div class="container">
 
 <nav>
 
-<a href="#">Startseite</a>
-<a href="#about">Über das Buch</a>
-<a href="#units">Einheiten</a>
-<a href="#contact">Kontakt</a>
+<div class="logo">
+
+<img src="images/logo.png" alt="Logo">
+
+</div>
+
+<ul>
+
+<li><a href="#">Startseite</a></li>
+<li><a href="#about">Über</a></li>
+<li><a href="#features">Funktionen</a></li>
+<li><a href="#units">Einheiten</a></li>
+<li><a href="#contact">Kontakt</a></li>
+
+</ul>
+
+<div class="nav-icons">
+
+<button id="darkBtn">
+<i class="fas fa-moon"></i>
+</button>
+
+<button id="langBtn">
+DE
+</button>
+
+</div>
 
 </nav>
 
+</div>
+
 </header>
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-<div class="hero-text">
+<div class="overlay"></div>
 
-<h1>Sprache und Kultur entdecken</h1>
+<div class="container hero-content">
 
-<p class="subtitle">
-Deutsch A1–A2 • Audio Companion
+<div class="hero-left">
+
+<span class="badge">
+Deutsch A1–A2
+</span>
+
+<h1>
+
+Sprache und Kultur entdecken
+
+</h1>
+
+<p>
+
+Willkommen auf der offiziellen Audio-Begleitwebsite.
+
+Hier finden Sie Hörtexte, Dialoge und Übungen
+für alle 12 Einheiten.
+
 </p>
 
-<p class="desc">
-Willkommen! Diese Website begleitet das Lehrwerk
-<b>Sprache und Kultur entdecken</b>.
-Hier finden Sie alle Hörtexte zu den zwölf Einheiten.
-</p>
+<div class="hero-buttons">
 
-<a href="#units" class="btn">
-Jetzt starten
+<a href="#units" class="primary-btn">
+
+Jetzt lernen
+
+</a>
+
+<a href="#about" class="secondary-btn">
+
+Mehr erfahren
+
 </a>
 
 </div>
 
-<div class="hero-image">
-<img src="images/image.png" alt="Book Cover">  
+</div>
+
+<div class="hero-right">
+
+<img src="images/image.png"
+alt="Buchcover">
+
+</div>
+
 </div>
 
 </section>
+<!-- ================= ABOUT ================= -->
 
 <section class="about" id="about">
+
+<div class="container">
 
 <h2>Über diese Website</h2>
 
 <p>
 
-Diese Website wurde als Audio-Begleitung zum Lehrwerk
-<b>Sprache und Kultur entdecken</b>
-entwickelt.
-
-Scannen Sie den QR-Code im Buch oder wählen Sie
-eine Einheit aus.
+Diese Website begleitet das Lehrwerk
+<strong>Sprache und Kultur entdecken</strong>.
+Hier finden Sie alle Hörtexte, Dialoge und Materialien
+für die zwölf Einheiten.
 
 </p>
 
-</section>
-
-<section class="stats">
-
-<div class="stat">
-<h3>12</h3>
-<p>Einheiten</p>
-</div>
-
-<div class="stat">
-<h3>48+</h3>
-<p>Audios</p>
-</div>
-
-<div class="stat">
-<h3>A1–A2</h3>
-<p>Niveau</p>
 </div>
 
 </section>
 
-<section id="units">
+<!-- ================= FEATURES ================= -->
 
-<h2 class="section-title">
-Alle Einheiten
-</h2>
+<section class="features" id="features">
+
+<div class="container">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🎧
+</div>
+
+<h3>Hörtexte</h3>
+
+<p>
+Alle Audios zu jeder Einheit.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+📖
+</div>
+
+<h3>Wortschatz</h3>
+
+<p>
+Neuer Wortschatz einfach lernen.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+📚
+</div>
+
+<h3>Grammatik</h3>
+
+<p>
+Regeln und Beispiele.
+</p>
+
+</div>
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🌍
+</div>
+
+<h3>Kultur</h3>
+
+<p>
+Deutschland und Kurdistan entdecken.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= UNITS ================= -->
+
+<section class="units" id="units">
+
+<div class="container">
+
+<h2>Alle Einheiten</h2>
 
 <input
 type="text"
 id="searchBox"
-placeholder="Einheit suchen..."
-onkeyup="searchUnits()">
+placeholder="🔍 Einheit suchen...">
 
-<div class="grid">
+<div class="unit-grid">
+<div class="unit-card blue">
+    <span>01</span>
+    <h3>Wortschatz</h3>
+    <p>Neue Wörter lernen</p>
+    <a href="einheit1.html">Öffnen →</a>
+</div>
 
-<a href="einheit1.html">📖 Einheit 1 – Wortschatz</a>
+<div class="unit-card green">
+    <span>02</span>
+    <h3>Zahlen 0–12</h3>
+    <p>Zahlen und Aussprache</p>
+    <a href="einheit2.html">Öffnen →</a>
+</div>
 
-<a href="einheit2.html">🔢 Einheit 2 – Zahlen 0–12</a>
+<div class="unit-card orange">
+    <span>03</span>
+    <h3>Familie</h3>
+    <p>Familienmitglieder</p>
+    <a href="einheit3.html">Öffnen →</a>
+</div>
 
-<a href="einheit3.html">👨‍👩‍👧 Einheit 3 – Familie</a>
+<div class="unit-card purple">
+    <span>04</span>
+    <h3>Schule & Fächer</h3>
+    <p>Schulalltag</p>
+    <a href="einheit4.html">Öffnen →</a>
+</div>
 
-<a href="einheit4.html">🏫 Einheit 4 – Schule & Fächer</a>
+<div class="unit-card red">
+    <span>05</span>
+    <h3>Essen & Trinken</h3>
+    <p>Lebensmittel und Getränke</p>
+    <a href="einheit5.html">Öffnen →</a>
+</div>
 
-<a href="einheit5.html">🍽️ Einheit 5 – Essen & Trinken</a>
+<div class="unit-card cyan">
+    <span>06</span>
+    <h3>Das Hobby</h3>
+    <p>Freizeit und Interessen</p>
+    <a href="einheit6.html">Öffnen →</a>
+</div>
 
-<a href="einheit6.html">⚽ Einheit 6 – Das Hobby</a>
+<div class="unit-card blue">
+    <span>07</span>
+    <h3>Unterwegs & Verkehr</h3>
+    <p>Reisen und Verkehr</p>
+    <a href="einheit7.html">Öffnen →</a>
+</div>
 
-<a href="einheit7.html">🚌 Einheit 7 – Unterwegs & Verkehr</a>
+<div class="unit-card green">
+    <span>08</span>
+    <h3>Das Fest</h3>
+    <p>Feiertage und Traditionen</p>
+    <a href="einheit8.html">Öffnen →</a>
+</div>
 
-<a href="einheit8.html">🎉 Einheit 8 – Das Fest</a>
+<div class="unit-card orange">
+    <span>09</span>
+    <h3>Einkaufen</h3>
+    <p>Im Geschäft</p>
+    <a href="einheit9.html">Öffnen →</a>
+</div>
 
-<a href="einheit9.html">🛒 Einheit 9 – Einkaufen</a>
+<div class="unit-card purple">
+    <span>10</span>
+    <h3>Wörter & Themen</h3>
+    <p>Wiederholung</p>
+    <a href="einheit10.html">Öffnen →</a>
+</div>
 
-<a href="einheit10.html">📚 Einheit 10 – Wörter & Themen</a>
+<div class="unit-card red">
+    <span>11</span>
+    <h3>Medien & Technologie</h3>
+    <p>Digitale Welt</p>
+    <a href="einheit11.html">Öffnen →</a>
+</div>
 
-<a href="einheit11.html">💻 Einheit 11 – Medien & Technologie</a>
+<div class="unit-card cyan">
+    <span>12</span>
+    <h3>Meinung & Diskussion</h3>
+    <p>Sprechen und Argumentieren</p>
+    <a href="einheit12.html">Öffnen →</a>
+</div>
 
-<a href="einheit12.html">💬 Einheit 12 – Meinung & Diskussion</a>
+</div>
+</div>
+</section>    
+    <!-- ================= FOOTER ================= -->
+
+<footer id="contact">
+
+<div class="container footer-content">
+
+<div>
+
+<img src="images/logo.png" alt="Logo" class="footer-logo">
+
+<p>
+Sprache und Kultur entdecken
+</p>
+
+<p>
+Deutsch A1–A2 Audio Companion
+</p>
 
 </div>
 
-</section>
-<footer id="contact">
+<div>
 
-    <h2>Kontakt</h2>
+<h3>Navigation</h3>
 
-    <p>
-        Sprache und Kultur entdecken
-    </p>
+<ul>
 
-    <p>
-        Deutsch A1–A2 Audio Companion
-    </p>
+<li><a href="#">Startseite</a></li>
 
-    <p>
-        © 2026 Alle Rechte vorbehalten
-    </p>
+<li><a href="#about">Über</a></li>
+
+<li><a href="#features">Funktionen</a></li>
+
+<li><a href="#units">Einheiten</a></li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h3>Kontakt</h3>
+
+<p>Email: info@example.com</p>
+
+<p>© 2026 Alle Rechte vorbehalten</p>
+
+</div>
+
+</div>
 
 </footer>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
