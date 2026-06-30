@@ -340,3 +340,10 @@ footer{
 footer p{
     margin:5px 0;
 }
+.desc{
+    font-size:18px;
+    color:#555;
+    max-width:600px;
+    line-height:1.7;
+    margin:20px 0 35px;
+}
