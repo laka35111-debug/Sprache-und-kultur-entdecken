@@ -25,3 +25,18 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         }
     });
 });
+.dark-mode{
+    background:#0b1220;
+    color:white;
+}
+
+.dark-mode .features,
+.dark-mode .units{
+    background:#0f172a;
+}
+
+.dark-mode .feature-card,
+.dark-mode .unit-card{
+    background:#111827;
+    color:white;
+}
