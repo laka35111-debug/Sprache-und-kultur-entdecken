@@ -73,15 +73,15 @@ nav{
 ========================= */
 
 .hero{
-    height:100vh;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
     background:
-    linear-gradient(rgba(15,76,129,0.75), rgba(15,76,129,0.75)),
+    linear-gradient(90deg, rgba(15,76,129,0.85), rgba(15,76,129,0.55)),
     url("images/image.png");
     background-size:cover;
     background-position:center;
-    display:flex;
-    align-items:center;
-    color:white;
+    padding-top:80px;
 }
 
 .hero-content{
@@ -139,7 +139,8 @@ nav{
 .hero-image img{
     width:380px;
     border-radius:20px;
-    box-shadow:0 25px 60px rgba(0,0,0,0.3);
+    box-shadow:0 25px 60px rgba(0,0,0,0.35);
+    transform:translateY(10px);
 }
 /* =========================
    FEATURES SECTION
