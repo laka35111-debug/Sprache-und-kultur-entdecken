@@ -1,34 +1,27 @@
-// Search
-const searchBox = document.getElementById("searchBox");
+// =========================
+// DARK MODE
+// =========================
 
-if(searchBox){
+const darkBtn = document.getElementById("darkMode");
 
-searchBox.addEventListener("keyup",function(){
+if (darkBtn) {
+    darkBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+    });
+}
 
-let value=this.value.toLowerCase();
+// =========================
+// SIMPLE SMOOTH SCROLL
+// =========================
 
-document.querySelectorAll(".unit-card").forEach(card=>{
-
-let text=card.innerText.toLowerCase();
-
-card.style.display=text.includes(value) ? "block":"none";
-
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+    });
 });
-
-});
-
-}
-
-// Dark Mode
-
-const darkBtn=document.getElementById("darkBtn");
-
-if(darkBtn){
-
-darkBtn.onclick=function(){
-
-document.body.classList.toggle("dark");
-
-}
-
-}
