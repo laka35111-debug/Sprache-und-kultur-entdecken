@@ -1,95 +1,60 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprache und Kultur entdecken</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
 
-<title>Sprache und Kultur entdecken</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
+    <script src="script.js" defer></script>
 </head>
 
 <body>
+
 <header>
 
 <div class="container">
 
+<h2 class="logo">Sprache und Kultur entdecken</h2>
+
 <nav>
 
-<a href="#" class="logo">
-<img src="images/logo.png" alt="Logo">
-</a>
+<a href="#">Startseite</a>
+<a href="#features">Funktionen</a>
+<a href="#units">Einheiten</a>
 
-<ul class="nav-links">
-
-<li><a href="#">Startseite</a></li>
-<li><a href="#features">Funktionen</a></li>
-<li><a href="#units">Einheiten</a></li>
-<li><a href="#contact">Kontakt</a></li>
-
-</ul>
-
-<div class="nav-buttons">
-
-<button id="darkMode">
-<i class="fas fa-moon"></i>
-</button>
-
-<button class="lang-btn">
-DE
-</button>
-
-</div>
+<button id="darkMode">🌙</button>
 
 </nav>
 
 </div>
 
 </header>
-
 <section class="hero">
-
-<div class="hero-overlay"></div>
 
 <div class="container hero-content">
 
 <div class="hero-text">
 
-<span class="hero-tag">
-Deutsch A1–A2
-</span>
+<span class="badge">Deutsch A1–A2</span>
 
-<h1>
-Sprache und Kultur entdecken
-</h1>
+<h1>Sprache und Kultur entdecken</h1>
 
 <p>
-
-Lernen Sie Deutsch Schritt für Schritt mit Hörtexten,
-Dialogen und Übungen für alle 12 Einheiten.
-
+Lernen Sie Deutsch mit Hörtexten, Dialogen und Übungen
+für alle 12 Einheiten.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#units" class="btn-yellow">
-Jetzt lernen
-</a>
+<a href="#units" class="btn btn-yellow">Jetzt starten</a>
 
-<a href="#features" class="btn-white">
-Mehr erfahren
-</a>
+<a href="#features" class="btn btn-white">Mehr erfahren</a>
 
 </div>
 
@@ -97,42 +62,39 @@ Mehr erfahren
 
 <div class="hero-image">
 
-<img src="images/image.png" alt="Buch">
+<img src="images/image.png" alt="Buchcover">
 
 </div>
 
 </div>
 
 </section>
+
 <section id="features" class="features">
 
 <div class="container">
 
-<h2 class="section-title">Warum diese Website?</h2>
+<h2>Warum diese Website?</h2>
 
-<div class="features-grid">
+<div class="feature-grid">
 
 <div class="feature-card">
-<div class="feature-icon">🎧</div>
-<h3>Hörtexte</h3>
-<p>Alle Audios für jede Einheit an einem Ort.</p>
+<h3>🎧 Hörtexte</h3>
+<p>Alle Audios zu jeder Einheit.</p>
 </div>
 
 <div class="feature-card">
-<div class="feature-icon">📖</div>
-<h3>Wortschatz</h3>
-<p>Neue Wörter einfach und schnell lernen.</p>
+<h3>📖 Wortschatz</h3>
+<p>Einfach und schnell lernen.</p>
 </div>
 
 <div class="feature-card">
-<div class="feature-icon">📚</div>
-<h3>Grammatik</h3>
-<p>Regeln mit klaren Beispielen verstehen.</p>
+<h3>📚 Grammatik</h3>
+<p>Mit Beispielen verstehen.</p>
 </div>
 
 <div class="feature-card">
-<div class="feature-icon">🌍</div>
-<h3>Kultur</h3>
+<h3>🌍 Kultur</h3>
 <p>Deutschland und Kurdistan entdecken.</p>
 </div>
 
@@ -141,154 +103,53 @@ Mehr erfahren
 </div>
 
 </section>
-
 <section id="units" class="units">
 
 <div class="container">
 
-<h2 class="section-title">Alle 12 Einheiten</h2>
+<h2>Alle 12 Einheiten</h2>
 
 <div class="units-grid">
-    <div class="unit-card blue">
-    <div class="unit-number">01</div>
-    <div class="unit-icon">📖</div>
-    <h3>Wortschatz</h3>
-    <p>Neue Wörter und Ausdrücke lernen.</p>
-    <a href="einheit1.html">Öffnen →</a>
-</div>
 
-<div class="unit-card green">
-    <div class="unit-number">02</div>
-    <div class="unit-icon">🔢</div>
-    <h3>Zahlen 0–12</h3>
-    <p>Zahlen lesen und aussprechen.</p>
-    <a href="einheit2.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>01</span><h3>📖 Wortschatz</h3><a href="einheit1.html">Öffnen</a></div>
 
-<div class="unit-card orange">
-    <div class="unit-number">03</div>
-    <div class="unit-icon">👨‍👩‍👧</div>
-    <h3>Familie</h3>
-    <p>Familienmitglieder kennenlernen.</p>
-    <a href="einheit3.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>02</span><h3>🔢 Zahlen 0–12</h3><a href="einheit2.html">Öffnen</a></div>
 
-<div class="unit-card purple">
-    <div class="unit-number">04</div>
-    <div class="unit-icon">🎒</div>
-    <h3>Schule &amp; Fächer</h3>
-    <p>Schule und Unterricht.</p>
-    <a href="einheit4.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>03</span><h3>👨‍👩‍👧 Familie</h3><a href="einheit3.html">Öffnen</a></div>
 
-<div class="unit-card red">
-    <div class="unit-number">05</div>
-    <div class="unit-icon">🍽️</div>
-    <h3>Essen &amp; Trinken</h3>
-    <p>Speisen und Getränke.</p>
-    <a href="einheit5.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>04</span><h3>🎒 Schule &amp; Fächer</h3><a href="einheit4.html">Öffnen</a></div>
 
-<div class="unit-card cyan">
-    <div class="unit-number">06</div>
-    <div class="unit-icon">⚽</div>
-    <h3>Das Hobby</h3>
-    <p>Freizeit und Interessen.</p>
-    <a href="einheit6.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>05</span><h3>🍽️ Essen &amp; Trinken</h3><a href="einheit5.html">Öffnen</a></div>
 
-<div class="unit-card blue">
-    <div class="unit-number">07</div>
-    <div class="unit-icon">🚌</div>
-    <h3>Unterwegs &amp; Verkehr</h3>
-    <p>Reisen und Verkehrsmittel.</p>
-    <a href="einheit7.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>06</span><h3>⚽ Das Hobby</h3><a href="einheit6.html">Öffnen</a></div>
 
-<div class="unit-card green">
-    <div class="unit-number">08</div>
-    <div class="unit-icon">🎉</div>
-    <h3>Das Fest</h3>
-    <p>Feiertage und Traditionen.</p>
-    <a href="einheit8.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>07</span><h3>🚌 Unterwegs &amp; Verkehr</h3><a href="einheit7.html">Öffnen</a></div>
 
-<div class="unit-card orange">
-    <div class="unit-number">09</div>
-    <div class="unit-icon">🛒</div>
-    <h3>Einkaufen</h3>
-    <p>Im Geschäft einkaufen.</p>
-    <a href="einheit9.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>08</span><h3>🎉 Das Fest</h3><a href="einheit8.html">Öffnen</a></div>
 
-<div class="unit-card purple">
-    <div class="unit-number">10</div>
-    <div class="unit-icon">📝</div>
-    <h3>Wörter &amp; Themen</h3>
-    <p>Wichtige Themen wiederholen.</p>
-    <a href="einheit10.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>09</span><h3>🛒 Einkaufen</h3><a href="einheit9.html">Öffnen</a></div>
 
-<div class="unit-card red">
-    <div class="unit-number">11</div>
-    <div class="unit-icon">💻</div>
-    <h3>Medien &amp; Technologie</h3>
-    <p>Digitale Welt entdecken.</p>
-    <a href="einheit11.html">Öffnen →</a>
-</div>
+<div class="unit-card"><span>10</span><h3>📝 Wörter &amp; Themen</h3><a href="einheit10.html">Öffnen</a></div>
 
-<div class="unit-card cyan">
-    <div class="unit-number">12</div>
-    <div class="unit-icon">💬</div>
-    <h3>Meinung &amp; Diskussion</h3>
-    <p>Sprechen und diskutieren.</p>
-    <a href="einheit12.html">Öffnen →</a>
+<div class="unit-card"><span>11</span><h3>💻 Medien &amp; Technologie</h3><a href="einheit11.html">Öffnen</a></div>
+
+<div class="unit-card"><span>12</span><h3>💬 Meinung &amp; Diskussion</h3><a href="einheit12.html">Öffnen</a></div>
+
 </div>
 
 </div>
-</div>
+
 </section>
-<footer id="contact">
 
-<div class="container footer">
+<footer>
 
-<div class="footer-left">
+<div class="container">
 
-<img src="images/logo.png" alt="Logo">
-
-<h2>Sprache und Kultur entdecken</h2>
-
-<p>
-Deutsch A1–A2 Audio Companion
-</p>
-
-</div>
-
-<div class="footer-links">
-
-<h3>Navigation</h3>
-
-<a href="#">Startseite</a>
-<a href="#features">Funktionen</a>
-<a href="#units">Einheiten</a>
-
-</div>
-
-<div class="footer-contact">
-
-<h3>Kontakt</h3>
-
-<p>info@example.com</p>
-
-<p>© 2026 Alle Rechte vorbehalten</p>
-
-</div>
+<p>© 2026 Sprache und Kultur entdecken</p>
 
 </div>
 
 </footer>
-
-<script src="script.js"></script>
 
 </body>
 </html>
