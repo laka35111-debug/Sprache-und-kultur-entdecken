@@ -554,3 +554,74 @@ audio{
     background:#f4c542;
     color:#222;
 }
+/* ===========================
+   Mobile Optimization
+=========================== */
+
+@media (max-width:768px){
+
+header .container{
+    flex-direction:column;
+    gap:15px;
+    padding:15px 20px;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.hero{
+    padding:140px 20px 70px;
+    text-align:center;
+}
+
+.hero-content{
+    flex-direction:column;
+    gap:40px;
+}
+
+.hero-text h1{
+    font-size:2.6rem;
+    line-height:1.15;
+}
+
+.hero-text p{
+    font-size:1.1rem;
+}
+
+.hero-buttons{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.hero-image img{
+    width:90%;
+    max-width:340px;
+}
+
+.feature-grid,
+.units-grid{
+    grid-template-columns:1fr;
+}
+
+.audio-card{
+    padding:25px;
+}
+
+.audio-number{
+    width:70px;
+    height:70px;
+    font-size:1.8rem;
+}
+
+audio{
+    width:100%;
+}
+
+footer{
+    text-align:center;
+}
+
+}
