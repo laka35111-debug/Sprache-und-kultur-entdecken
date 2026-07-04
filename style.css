@@ -78,10 +78,14 @@ nav a:hover{
 
 .hero{
     min-height:100vh;
-    padding-top:80px;
     display:flex;
     align-items:center;
-    background:linear-gradient(135deg,#0f4c81,#2563eb);
+    background:
+    linear-gradient(rgba(8,30,60,.75),rgba(8,30,60,.75)),
+    url("images/hero-bg.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
 .hero-content{
