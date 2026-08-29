@@ -1,75 +1,27 @@
-/* =========================================================
-   SPRACHE UND KULTUR ENTDECKEN
-   Main Website JavaScript
-========================================================= */
-
-
 /* =========================
    DARK MODE
 ========================= */
 
 const darkButton = document.getElementById("darkMode");
 
-function updateDarkModeButton(){
-
-    if(!darkButton) return;
-
-    const darkEnabled =
-        document.body.classList.contains("dark");
-
-    darkButton.textContent =
-        darkEnabled ? "☀️" : "🌙";
-
-    darkButton.setAttribute(
-        "aria-label",
-        darkEnabled
-            ? "Hellmodus aktivieren"
-            : "Dunkelmodus aktivieren"
-    );
-
-    darkButton.setAttribute(
-        "title",
-        darkEnabled
-            ? "Hellmodus"
-            : "Dunkelmodus"
-    );
-}
-
-
-/* Load saved mode */
-
-const savedMode =
-    localStorage.getItem("darkMode");
-
-if(savedMode === "enabled"){
-
+/* Load saved dark mode */
+if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark");
-
 }
 
-updateDarkModeButton();
-
-
-/* Toggle */
-
-if(darkButton){
-
+/* Toggle dark mode */
+if (darkButton) {
     darkButton.addEventListener("click", () => {
 
         document.body.classList.toggle("dark");
 
-        const enabled =
-            document.body.classList.contains("dark");
-
-        localStorage.setItem(
-            "darkMode",
-            enabled ? "enabled" : "disabled"
-        );
-
-        updateDarkModeButton();
+        if (document.body.classList.contains("dark")) {
+            localStorage.setItem("darkMode", "enabled");
+        } else {
+            localStorage.setItem("darkMode", "disabled");
+        }
 
     });
-
 }
 
 
@@ -79,191 +31,77 @@ if(darkButton){
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    anchor.addEventListener("click", function(event){
+    anchor.addEventListener("click", function(e) {
 
-        const targetId =
-            this.getAttribute("href");
+        e.preventDefault();
 
-        /* Ignore empty # links */
-
-        if(
-            !targetId ||
-            targetId === "#"
-        ){
-            return;
-        }
-
-        const target =
-            document.querySelector(targetId);
-
-        if(target){
-
-            event.preventDefault();
-
-            target.scrollIntoView({
-                behavior:"smooth",
-                block:"start"
-            });
-
-        }
-
-    });
-
-});
-
-
-/* =========================
-   SCROLL REVEAL
-========================= */
-
-const revealElements =
-    document.querySelectorAll(".reveal");
-
-
-if("IntersectionObserver" in window){
-
-    const revealObserver =
-        new IntersectionObserver(
-            (entries, observer) => {
-
-                entries.forEach(entry => {
-
-                    if(entry.isIntersecting){
-
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-                        observer.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold:0.12,
-                rootMargin:"0px 0px -40px 0px"
-            }
+        const target = document.querySelector(
+            this.getAttribute("href")
         );
 
+        if (target) {
 
-    revealElements.forEach(element => {
-
-        revealObserver.observe(element);
-
-    });
-
-}else{
-
-    revealElements.forEach(element => {
-
-        element.classList.add("visible");
-
-    });
-
-}
-
-
-/* =========================
-   BACK TO TOP
-========================= */
-
-const topBtn =
-    document.getElementById("topBtn");
-
-
-if(topBtn){
-
-    function updateTopButton(){
-
-        if(window.scrollY > 500){
-
-            topBtn.classList.add("show");
-
-        }else{
-
-            topBtn.classList.remove("show");
-
-        }
-
-    }
-
-
-    window.addEventListener(
-        "scroll",
-        updateTopButton,
-        { passive:true }
-    );
-
-
-    topBtn.addEventListener(
-        "click",
-        () => {
-
-            window.scrollTo({
-                top:0,
-                behavior:"smooth"
+            target.scrollIntoView({
+                behavior: "smooth"
             });
 
         }
-    );
 
-}
-
-
-/* =========================
-   HEADER SHADOW
-========================= */
-
-const header =
-    document.querySelector("header");
-
-
-if(header){
-
-    function updateHeader(){
-
-        if(window.scrollY > 30){
-
-            header.style.boxShadow =
-                "0 8px 25px rgba(0,0,0,.12)";
-
-        }else{
-
-            header.style.boxShadow =
-                "none";
-
-        }
-
-    }
-
-
-    window.addEventListener(
-        "scroll",
-        updateHeader,
-        { passive:true }
-    );
-
-    updateHeader();
-
-}
-
-
-/* =========================
-   CURRENT YEAR
-========================= */
-
-const yearElements =
-    document.querySelectorAll(
-        "[data-current-year]"
-    );
-
-yearElements.forEach(element => {
-
-    element.textContent =
-        new Date().getFullYear();
+    });
 
 });
+
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+        }
+
+    });
+
+});
+
+document.querySelectorAll("section").forEach(section => {
+
+    section.classList.add("hidden");
+
+    observer.observe(section);
+
+});
+
+
+/* =========================
+   BACK TO TOP BUTTON
+========================= */
+
+const topBtn = document.getElementById("topBtn");
+
+if (topBtn) {
+
+    window.addEventListener("scroll", () => {
+
+        if (window.scrollY > 300) {
+            topBtn.style.display = "block";
+        } else {
+            topBtn.style.display = "none";
+        }
+
+    });
+
+    topBtn.addEventListener("click", () => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    });
+
+}
