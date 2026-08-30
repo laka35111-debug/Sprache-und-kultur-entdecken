@@ -2,46 +2,94 @@
 <html lang="de">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sprache und Kultur entdecken | Deutsch lernen</title>
 
     <meta name="description"
-        content="Sprache und Kultur entdecken – Deutsch lernen auf A1-A2 Niveau mit Hörtexten, Einheiten und kulturellen Themen.">
+          content="Sprache und Kultur entdecken – Deutsch lernen mit Hörtexten, Wortschatz, Grammatik, Übungen und kulturellen Einblicken für A1–A2.">
 
-    <link rel="stylesheet" href="style.css">
+    <meta name="keywords"
+          content="Deutsch lernen, Deutsch A1, Deutsch A2, Kurdistan, Deutschland, Wortschatz, Grammatik, Hörtexte">
 
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical"
+          href="https://laka35111-debug.github.io/Sprache-und-kultur-entdecken/">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+
 </head>
+
 
 <body>
 
     <!-- =========================
+         BACK TO TOP
+    ========================= -->
+
+    <button id="topBtn" aria-label="Nach oben">
+        ↑
+    </button>
+
+
+    <!-- =========================
          HEADER
-    ========================== -->
+    ========================= -->
 
     <header>
 
         <div class="container header-inner">
 
             <a href="index.html" class="brand">
-                <img src="images/logo.png" class="logo-image" alt="Sprache und Kultur entdecken">
+
+                <img src="images/logo.png"
+                     class="logo-image"
+                     alt="Sprache und Kultur entdecken">
+
             </a>
 
-            <nav>
-                <a href="index.html">Startseite</a>
-                <a href="#units">Einheiten</a>
-                <a href="#about">Über das Buch</a>
 
-                <button id="darkMode" type="button" aria-label="Dark Mode">
+            <nav id="mainNav">
+
+                <a href="#start">
+                    Startseite
+                </a>
+
+                <a href="#features">
+                    Lernen
+                </a>
+
+                <a href="#units">
+                    Einheiten
+                </a>
+
+                <a href="#about">
+                    Über das Buch
+                </a>
+
+                <button id="darkMode"
+                        type="button"
+                        aria-label="Dunkelmodus aktivieren"
+                        title="Dunkelmodus">
                     🌙
                 </button>
+
             </nav>
 
         </div>
@@ -49,36 +97,48 @@
     </header>
 
 
-    <!-- =========================
-         HERO
-    ========================== -->
-
     <main>
 
-        <section class="hero">
+        <!-- =========================
+             HERO
+        ========================= -->
+
+        <section id="start" class="hero">
 
             <div class="hero-decoration hero-decoration-one"></div>
             <div class="hero-decoration hero-decoration-two"></div>
 
+
             <div class="container hero-content">
 
-                <div class="hero-text">
+
+                <!-- HERO TEXT -->
+
+                <div class="hero-text reveal">
 
                     <div class="eyebrow">
-                        Deutsch lernen · A1–A2
+                        DEUTSCH LERNEN · KULTUR ENTDECKEN
                     </div>
 
+
                     <h1>
-                        Sprache und
+                        Sprache
+                        <br>
+                        und
                         <span>Kultur</span>
-                        entdecken
+                        <br>
+                        entdecken.
                     </h1>
 
+
                     <p class="hero-description">
-                        Entdecken Sie die deutsche Sprache und Kultur
-                        Schritt für Schritt – mit Wortschatz, Hörtexten,
-                        Übungen und spannenden Themen.
+
+                        Lerne Deutsch Schritt für Schritt und entdecke
+                        gleichzeitig die Kulturen von Deutschland und
+                        Kurdistan.
+
                     </p>
+
 
                     <div class="hero-buttons">
 
@@ -92,25 +152,53 @@
 
                     </div>
 
+
+                    <!-- HERO STATS -->
+
                     <div class="hero-meta">
 
                         <div>
-                            <strong>12</strong>
-                            <span>Einheiten</span>
+
+                            <strong>
+                                A1–A2
+                            </strong>
+
+                            <span>
+                                Niveau
+                            </span>
+
                         </div>
+
 
                         <div class="meta-line"></div>
 
+
                         <div>
-                            <strong>48+</strong>
-                            <span>Hörtexte</span>
+
+                            <strong>
+                                12
+                            </strong>
+
+                            <span>
+                                Einheiten
+                            </span>
+
                         </div>
+
 
                         <div class="meta-line"></div>
 
+
                         <div>
-                            <strong>A1–A2</strong>
-                            <span>Niveau</span>
+
+                            <strong>
+                                57+
+                            </strong>
+
+                            <span>
+                                Audios
+                            </span>
+
                         </div>
 
                     </div>
@@ -118,24 +206,29 @@
                 </div>
 
 
-                <!-- BOOK -->
+                <!-- HERO BOOK -->
 
-                <div class="hero-book">
+                <div class="hero-book reveal">
 
                     <div class="book-glow"></div>
 
                     <div class="book-frame">
 
                         <img src="images/image.png"
-                            alt="Buch Sprache und Kultur entdecken">
+                             alt="Buch Sprache und Kultur entdecken">
 
                     </div>
 
+
                     <div class="book-caption">
 
-                        <span>Deutsch lernen</span>
+                        <span>
+                            Dein Deutschkurs
+                        </span>
 
-                        <strong>Sprache und Kultur entdecken</strong>
+                        <strong>
+                            Sprache und Kultur entdecken
+                        </strong>
 
                     </div>
 
@@ -148,19 +241,29 @@
 
         <!-- =========================
              INTRO STRIP
-        ========================== -->
+        ========================= -->
 
         <section class="intro-strip">
 
             <div class="container intro-grid">
 
+
                 <div class="intro-item">
 
-                    <div class="intro-icon">📖</div>
+                    <div class="intro-icon">
+                        🎧
+                    </div>
 
                     <div>
-                        <strong>Wortschatz</strong>
-                        <span>Wichtige Wörter</span>
+
+                        <strong>
+                            Hörtexte
+                        </strong>
+
+                        <span>
+                            Deutsch hören
+                        </span>
+
                     </div>
 
                 </div>
@@ -168,11 +271,20 @@
 
                 <div class="intro-item">
 
-                    <div class="intro-icon">🎧</div>
+                    <div class="intro-icon">
+                        📖
+                    </div>
 
                     <div>
-                        <strong>Hörtexte</strong>
-                        <span>Deutsch hören</span>
+
+                        <strong>
+                            Wortschatz
+                        </strong>
+
+                        <span>
+                            Neue Wörter lernen
+                        </span>
+
                     </div>
 
                 </div>
@@ -180,11 +292,20 @@
 
                 <div class="intro-item">
 
-                    <div class="intro-icon">🌍</div>
+                    <div class="intro-icon">
+                        📝
+                    </div>
 
                     <div>
-                        <strong>Kultur</strong>
-                        <span>Deutschland entdecken</span>
+
+                        <strong>
+                            Übungen
+                        </strong>
+
+                        <span>
+                            Deutsch üben
+                        </span>
+
                     </div>
 
                 </div>
@@ -192,14 +313,24 @@
 
                 <div class="intro-item">
 
-                    <div class="intro-icon">✏️</div>
+                    <div class="intro-icon">
+                        🌿
+                    </div>
 
                     <div>
-                        <strong>Übungen</strong>
-                        <span>Deutsch üben</span>
+
+                        <strong>
+                            Kultur
+                        </strong>
+
+                        <span>
+                            Deutschland & Kurdistan
+                        </span>
+
                     </div>
 
                 </div>
+
 
             </div>
 
@@ -208,26 +339,27 @@
 
         <!-- =========================
              FEATURES
-        ========================== -->
+        ========================= -->
 
-        <section class="section features">
+        <section id="features" class="features section">
 
             <div class="container">
 
-                <div class="section-heading">
+
+                <div class="section-heading reveal">
 
                     <div class="section-label">
-                        DAS LERNKONZEPT
+                        LERNEN
                     </div>
 
                     <h2>
                         Mehr als nur
-                        <span>Wörter lernen</span>
+                        <span>Vokabeln.</span>
                     </h2>
 
                     <p>
-                        Lernen Sie Deutsch mit einem abwechslungsreichen
-                        und praktischen Konzept.
+                        Lerne Deutsch mit verschiedenen Methoden
+                        und entdecke dabei neue kulturelle Perspektiven.
                     </p>
 
                 </div>
@@ -235,68 +367,94 @@
 
                 <div class="feature-grid">
 
-                    <article class="feature-card">
 
-                        <div class="feature-icon">📚</div>
+                    <article class="feature-card reveal">
 
-                        <div class="feature-number">01</div>
+                        <span class="feature-number">
+                            01
+                        </span>
 
-                        <h3>Wortschatz</h3>
+                        <div class="feature-icon">
+                            🎧
+                        </div>
+
+                        <h3>
+                            Hörtexte
+                        </h3>
 
                         <p>
-                            Lernen Sie nützliche deutsche Wörter
-                            und Ausdrücke für den Alltag.
+                            Höre authentische deutsche Texte und
+                            verbessere dein Hörverständnis.
                         </p>
 
                     </article>
 
 
-                    <article class="feature-card">
+                    <article class="feature-card reveal">
 
-                        <div class="feature-icon">🎧</div>
+                        <span class="feature-number">
+                            02
+                        </span>
 
-                        <div class="feature-number">02</div>
+                        <div class="feature-icon">
+                            📚
+                        </div>
 
-                        <h3>Hören</h3>
+                        <h3>
+                            Wortschatz
+                        </h3>
 
                         <p>
-                            Hören Sie authentische Hörtexte und
-                            verbessern Sie Ihr Hörverständnis.
+                            Lerne wichtige Wörter und Ausdrücke
+                            für deinen Alltag.
                         </p>
 
                     </article>
 
 
-                    <article class="feature-card">
+                    <article class="feature-card reveal">
 
-                        <div class="feature-icon">🌍</div>
+                        <span class="feature-number">
+                            03
+                        </span>
 
-                        <div class="feature-number">03</div>
+                        <div class="feature-icon">
+                            ✏️
+                        </div>
 
-                        <h3>Kultur</h3>
+                        <h3>
+                            Übungen
+                        </h3>
 
                         <p>
-                            Lernen Sie interessante Aspekte der
-                            deutschen und kurdischen Kultur kennen.
+                            Festige dein Wissen mit abwechslungsreichen
+                            Aufgaben und Übungen.
                         </p>
 
                     </article>
 
 
-                    <article class="feature-card">
+                    <article class="feature-card reveal">
 
-                        <div class="feature-icon">✏️</div>
+                        <span class="feature-number">
+                            04
+                        </span>
 
-                        <div class="feature-number">04</div>
+                        <div class="feature-icon">
+                            🌍
+                        </div>
 
-                        <h3>Üben</h3>
+                        <h3>
+                            Kultur
+                        </h3>
 
                         <p>
-                            Festigen Sie Ihre Deutschkenntnisse
-                            mit abwechslungsreichen Übungen.
+                            Entdecke Gemeinsamkeiten und Unterschiede
+                            zwischen Deutschland und Kurdistan.
                         </p>
 
                     </article>
+
 
                 </div>
 
@@ -307,37 +465,40 @@
 
         <!-- =========================
              UNITS
-        ========================== -->
+        ========================= -->
 
-        <section class="section units" id="units">
+        <section id="units" class="units section">
 
             <div class="container">
 
-                <div class="section-heading units-heading">
+
+                <div class="section-heading units-heading reveal">
 
                     <div class="section-label">
-                        DEIN LERNWEG
+                        DEIN KURS
                     </div>
 
                     <h2>
-                        Die <span>Einheiten</span>
+                        Entdecke die
+                        <span>12 Einheiten</span>
                     </h2>
 
                     <p>
-                        Wählen Sie eine Einheit und beginnen Sie
-                        mit dem Lernen.
+                        Von den ersten Wörtern bis zu Meinungen
+                        und Diskussionen.
                     </p>
 
                 </div>
 
 
-                <!-- FOUNDATIONS -->
+                <!-- ALPHABET -->
 
-                <div class="foundations-card">
+                <div class="foundations-card reveal">
 
                     <div class="foundations-icon">
                         🔤
                     </div>
+
 
                     <div class="foundations-content">
 
@@ -346,41 +507,42 @@
                         </div>
 
                         <h3>
-                            Alphabet & Aussprache
+                            Deutsches Alphabet
                         </h3>
 
                         <p>
-                            Lernen Sie das deutsche Alphabet
-                            und die wichtigsten Laute.
+                            Lerne die Buchstaben des deutschen Alphabets
+                            und übe die richtige Aussprache.
                         </p>
 
                     </div>
 
+
                     <a href="alphabet.html" class="outline-btn">
-                        Lernen →
+                        Öffnen →
                     </a>
 
                 </div>
 
 
-                <!-- UNIT GRID -->
+                <!-- 12 UNITS -->
 
                 <div class="units-grid">
 
 
                     <!-- EINHEIT 1 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 01
+                                01
                             </span>
 
-                            <div class="unit-icon">
-                                🗣️
-                            </div>
+                            <span class="unit-icon">
+                                📖
+                            </span>
 
                         </div>
 
@@ -389,8 +551,7 @@
                         </h3>
 
                         <p>
-                            Die wichtigsten Wörter und
-                            Ausdrücke für den Anfang.
+                            Erste wichtige Wörter und Ausdrücke.
                         </p>
 
                         <a href="einheit1.html">
@@ -403,17 +564,17 @@
 
                     <!-- EINHEIT 2 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 02
+                                02
                             </span>
 
-                            <div class="unit-icon">
+                            <span class="unit-icon">
                                 🔢
-                            </div>
+                            </span>
 
                         </div>
 
@@ -422,8 +583,7 @@
                         </h3>
 
                         <p>
-                            Zahlen lernen und im Alltag
-                            richtig verwenden.
+                            Zahlen verstehen, sprechen und schreiben.
                         </p>
 
                         <a href="einheit2.html">
@@ -436,17 +596,17 @@
 
                     <!-- EINHEIT 3 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 03
+                                03
                             </span>
 
-                            <div class="unit-icon">
-                                👨‍👩‍👧‍👦
-                            </div>
+                            <span class="unit-icon">
+                                👨‍👩‍👧
+                            </span>
 
                         </div>
 
@@ -455,8 +615,7 @@
                         </h3>
 
                         <p>
-                            Wörter und Ausdrücke rund um
-                            Familie und Verwandtschaft.
+                            Menschen beschreiben und über Familie sprechen.
                         </p>
 
                         <a href="einheit3.html">
@@ -469,17 +628,17 @@
 
                     <!-- EINHEIT 4 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 04
+                                04
                             </span>
 
-                            <div class="unit-icon">
-                                🏫
-                            </div>
+                            <span class="unit-icon">
+                                🎒
+                            </span>
 
                         </div>
 
@@ -488,8 +647,7 @@
                         </h3>
 
                         <p>
-                            Alles rund um Schule, Unterricht
-                            und Schulfächer.
+                            Über Schule, Unterricht und Fächer sprechen.
                         </p>
 
                         <a href="einheit4.html">
@@ -502,17 +660,17 @@
 
                     <!-- EINHEIT 5 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 05
+                                05
                             </span>
 
-                            <div class="unit-icon">
-                                🍎
-                            </div>
+                            <span class="unit-icon">
+                                🍽️
+                            </span>
 
                         </div>
 
@@ -521,8 +679,7 @@
                         </h3>
 
                         <p>
-                            Lebensmittel, Getränke und
-                            Situationen beim Essen.
+                            Lebensmittel, Getränke und Mahlzeiten.
                         </p>
 
                         <a href="einheit5.html">
@@ -535,17 +692,17 @@
 
                     <!-- EINHEIT 6 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 06
+                                06
                             </span>
 
-                            <div class="unit-icon">
+                            <span class="unit-icon">
                                 ⚽
-                            </div>
+                            </span>
 
                         </div>
 
@@ -554,8 +711,7 @@
                         </h3>
 
                         <p>
-                            Sprechen Sie über Ihre Hobbys
-                            und Freizeitaktivitäten.
+                            Über Freizeit und Lieblingsaktivitäten sprechen.
                         </p>
 
                         <a href="einheit6.html">
@@ -568,17 +724,17 @@
 
                     <!-- EINHEIT 7 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 07
+                                07
                             </span>
 
-                            <div class="unit-icon">
-                                🚆
-                            </div>
+                            <span class="unit-icon">
+                                🚌
+                            </span>
 
                         </div>
 
@@ -587,8 +743,7 @@
                         </h3>
 
                         <p>
-                            Unterwegs sein, Verkehrsmittel
-                            und Wege beschreiben.
+                            Wege, Verkehrsmittel und Orientierung.
                         </p>
 
                         <a href="einheit7.html">
@@ -601,17 +756,17 @@
 
                     <!-- EINHEIT 8 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 08
+                                08
                             </span>
 
-                            <div class="unit-icon">
+                            <span class="unit-icon">
                                 🎉
-                            </div>
+                            </span>
 
                         </div>
 
@@ -620,8 +775,7 @@
                         </h3>
 
                         <p>
-                            Feste, Feiern und besondere
-                            Momente kennenlernen.
+                            Über Feste, Feiern und Traditionen sprechen.
                         </p>
 
                         <a href="einheit8.html">
@@ -634,17 +788,17 @@
 
                     <!-- EINHEIT 9 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 09
+                                09
                             </span>
 
-                            <div class="unit-icon">
+                            <span class="unit-icon">
                                 🛍️
-                            </div>
+                            </span>
 
                         </div>
 
@@ -653,8 +807,7 @@
                         </h3>
 
                         <p>
-                            Im Geschäft sprechen, Preise
-                            verstehen und einkaufen.
+                            Preise, Geschäfte und Einkaufen im Alltag.
                         </p>
 
                         <a href="einheit9.html">
@@ -667,17 +820,17 @@
 
                     <!-- EINHEIT 10 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 10
+                                10
                             </span>
 
-                            <div class="unit-icon">
-                                💬
-                            </div>
+                            <span class="unit-icon">
+                                💡
+                            </span>
 
                         </div>
 
@@ -686,8 +839,7 @@
                         </h3>
 
                         <p>
-                            Verschiedene wichtige Wörter
-                            und Alltagsthemen.
+                            Wichtige Wörter aus verschiedenen Themenbereichen.
                         </p>
 
                         <a href="einheit10.html">
@@ -700,17 +852,17 @@
 
                     <!-- EINHEIT 11 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 11
+                                11
                             </span>
 
-                            <div class="unit-icon">
+                            <span class="unit-icon">
                                 📱
-                            </div>
+                            </span>
 
                         </div>
 
@@ -719,8 +871,7 @@
                         </h3>
 
                         <p>
-                            Medien, digitale Geräte und
-                            moderne Technologie.
+                            Über Medien, Computer und Technologie sprechen.
                         </p>
 
                         <a href="einheit11.html">
@@ -733,17 +884,17 @@
 
                     <!-- EINHEIT 12 -->
 
-                    <article class="unit-card">
+                    <article class="unit-card reveal">
 
                         <div class="unit-top">
 
                             <span class="unit-number">
-                                EINHEIT 12
+                                12
                             </span>
 
-                            <div class="unit-icon">
-                                💡
-                            </div>
+                            <span class="unit-icon">
+                                💬
+                            </span>
 
                         </div>
 
@@ -752,8 +903,7 @@
                         </h3>
 
                         <p>
-                            Meinungen ausdrücken und
-                            einfache Diskussionen führen.
+                            Meinungen ausdrücken und Gespräche führen.
                         </p>
 
                         <a href="einheit12.html">
@@ -773,43 +923,45 @@
 
         <!-- =========================
              ABOUT
-        ========================== -->
+        ========================= -->
 
-        <section class="section about" id="about">
+        <section id="about" class="about section">
 
             <div class="container about-grid">
 
-                <div class="about-book">
+
+                <div class="about-book reveal">
 
                     <div class="about-book-decoration"></div>
 
                     <img src="images/image.png"
-                        alt="Sprache und Kultur entdecken">
+                         alt="Sprache und Kultur entdecken Buch">
 
                 </div>
 
 
-                <div class="about-content">
+                <div class="about-content reveal">
 
                     <div class="section-label">
-                        ÜBER DAS BUCH
+                        ÜBER DAS PROJEKT
                     </div>
 
                     <h2>
-                        Deutsch lernen
-                        mit Kultur
+                        Eine Sprache.
+                        <br>
+                        Zwei Kulturen.
                     </h2>
 
                     <p>
-                        „Sprache und Kultur entdecken“ verbindet
-                        Deutschlernen mit interessanten Themen
-                        aus dem Alltag und der Kultur.
+                        „Sprache und Kultur entdecken“ verbindet das
+                        Lernen der deutschen Sprache mit Einblicken
+                        in Deutschland und Kurdistan.
                     </p>
 
                     <p>
-                        Die Einheiten führen Schritt für Schritt
-                        durch wichtige Wörter, Ausdrücke und
-                        Hörtexte für Deutschlernende.
+                        Die begleitende Website bietet zusätzliche
+                        Hörtexte und digitale Inhalte, die das Lernen
+                        aus dem Buch ergänzen.
                     </p>
 
 
@@ -817,22 +969,17 @@
 
                         <div>
                             <span>✓</span>
-                            A1–A2 Niveau
+                            <strong>A1–A2</strong>
                         </div>
 
                         <div>
                             <span>✓</span>
-                            12 Einheiten
+                            <strong>12 Einheiten</strong>
                         </div>
 
                         <div>
                             <span>✓</span>
-                            Hörtexte
-                        </div>
-
-                        <div>
-                            <span>✓</span>
-                            Kulturthemen
+                            <strong>57+ Audios</strong>
                         </div>
 
                     </div>
@@ -846,11 +993,11 @@
 
         <!-- =========================
              CTA
-        ========================== -->
+        ========================= -->
 
         <section class="cta">
 
-            <div class="container cta-content">
+            <div class="container cta-content reveal">
 
                 <div>
 
@@ -859,19 +1006,19 @@
                     </div>
 
                     <h2>
-                        Beginnen wir
-                        mit Deutsch.
+                        Deine Reise beginnt hier.
                     </h2>
 
                     <p>
-                        Wählen Sie eine Einheit und starten Sie
-                        Ihre Lernreise.
+                        Öffne eine Einheit und entdecke Deutsch
+                        Schritt für Schritt.
                     </p>
 
                 </div>
 
+
                 <a href="#units" class="btn btn-light">
-                    Einheiten ansehen →
+                    Zu den Einheiten →
                 </a>
 
             </div>
@@ -883,78 +1030,63 @@
 
     <!-- =========================
          FOOTER
-    ========================== -->
+    ========================= -->
 
     <footer>
 
-        <div class="container">
-
-            <div class="footer-content">
-
-                <div class="footer-brand">
-
-                    <img src="images/logo.png"
-                        alt="Sprache und Kultur entdecken">
-
-                    <p>
-                        Sprache und Kultur entdecken –
-                        Deutsch lernen mit Wortschatz,
-                        Hörtexten und Kultur.
-                    </p>
-
-                </div>
+        <div class="container footer-content">
 
 
-                <div class="footer-links">
+            <div class="footer-brand">
 
-                    <a href="index.html">
-                        Startseite
-                    </a>
+                <img src="images/logo.png"
+                     alt="Sprache und Kultur entdecken">
 
-                    <a href="#units">
-                        Einheiten
-                    </a>
-
-                    <a href="#about">
-                        Über das Buch
-                    </a>
-
-                </div>
+                <p>
+                    Deutsch lernen.
+                    Sprache verstehen.
+                    Kultur entdecken.
+                </p>
 
             </div>
 
 
-            <div class="footer-bottom">
+            <div class="footer-links">
 
-                <span>
-                    © 2026 Sprache und Kultur entdecken
-                </span>
+                <a href="#start">
+                    Startseite
+                </a>
 
-                <span>
-                    Deutsch lernen · A1–A2
-                </span>
+                <a href="#features">
+                    Lernen
+                </a>
+
+                <a href="#units">
+                    Einheiten
+                </a>
+
+                <a href="#about">
+                    Über das Buch
+                </a>
 
             </div>
 
         </div>
 
+
+        <div class="container footer-bottom">
+
+            <p>
+                © 2026 Sprache und Kultur entdecken
+            </p>
+
+            <span>
+                Deutschland 🇩🇪 · Kurdistan 🌿
+            </span>
+
+        </div>
+
     </footer>
-
-
-    <!-- =========================
-         TOP BUTTON
-    ========================== -->
-
-    <button id="topBtn"
-        type="button"
-        aria-label="Nach oben">
-
-        ↑
-
-    </button>
-
-
-    <script src="script.js"></script>
 
 </body>
 
