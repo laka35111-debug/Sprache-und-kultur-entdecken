@@ -10,9 +10,9 @@
 
 const darkButton = document.getElementById("darkMode");
 
-function updateDarkModeButton(){
+function updateDarkModeButton() {
 
-    if(!darkButton) return;
+    if (!darkButton) return;
 
     const darkEnabled =
         document.body.classList.contains("dark");
@@ -36,23 +36,28 @@ function updateDarkModeButton(){
 }
 
 
-/* Load saved mode */
+/* Load saved dark mode */
 
-const savedMode =
-    localStorage.getItem("darkMode");
+try {
 
-if(savedMode === "enabled"){
+    const savedMode =
+        localStorage.getItem("darkMode");
 
-    document.body.classList.add("dark");
+    if (savedMode === "enabled") {
+        document.body.classList.add("dark");
+    }
 
+} catch (error) {
+    console.log("Dark mode storage unavailable.");
 }
+
 
 updateDarkModeButton();
 
 
-/* Toggle */
+/* Toggle dark mode */
 
-if(darkButton){
+if (darkButton) {
 
     darkButton.addEventListener("click", () => {
 
@@ -61,10 +66,16 @@ if(darkButton){
         const enabled =
             document.body.classList.contains("dark");
 
-        localStorage.setItem(
-            "darkMode",
-            enabled ? "enabled" : "disabled"
-        );
+        try {
+
+            localStorage.setItem(
+                "darkMode",
+                enabled ? "enabled" : "disabled"
+            );
+
+        } catch (error) {
+            console.log("Could not save dark mode.");
+        }
 
         updateDarkModeButton();
 
@@ -79,30 +90,25 @@ if(darkButton){
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    anchor.addEventListener("click", function(event){
+    anchor.addEventListener("click", function(event) {
 
         const targetId =
             this.getAttribute("href");
 
-        /* Ignore empty # links */
-
-        if(
-            !targetId ||
-            targetId === "#"
-        ){
+        if (!targetId || targetId === "#") {
             return;
         }
 
         const target =
             document.querySelector(targetId);
 
-        if(target){
+        if (target) {
 
             event.preventDefault();
 
             target.scrollIntoView({
-                behavior:"smooth",
-                block:"start"
+                behavior: "smooth",
+                block: "start"
             });
 
         }
@@ -120,7 +126,7 @@ const revealElements =
     document.querySelectorAll(".reveal");
 
 
-if("IntersectionObserver" in window){
+if ("IntersectionObserver" in window) {
 
     const revealObserver =
         new IntersectionObserver(
@@ -128,7 +134,7 @@ if("IntersectionObserver" in window){
 
                 entries.forEach(entry => {
 
-                    if(entry.isIntersecting){
+                    if (entry.isIntersecting) {
 
                         entry.target.classList.add(
                             "visible"
@@ -144,8 +150,8 @@ if("IntersectionObserver" in window){
 
             },
             {
-                threshold:0.12,
-                rootMargin:"0px 0px -40px 0px"
+                threshold: 0.12,
+                rootMargin: "0px 0px -40px 0px"
             }
         );
 
@@ -156,7 +162,7 @@ if("IntersectionObserver" in window){
 
     });
 
-}else{
+} else {
 
     revealElements.forEach(element => {
 
@@ -175,15 +181,15 @@ const topBtn =
     document.getElementById("topBtn");
 
 
-if(topBtn){
+if (topBtn) {
 
-    function updateTopButton(){
+    function updateTopButton() {
 
-        if(window.scrollY > 500){
+        if (window.scrollY > 500) {
 
             topBtn.classList.add("show");
 
-        }else{
+        } else {
 
             topBtn.classList.remove("show");
 
@@ -195,7 +201,7 @@ if(topBtn){
     window.addEventListener(
         "scroll",
         updateTopButton,
-        { passive:true }
+        { passive: true }
     );
 
 
@@ -204,12 +210,15 @@ if(topBtn){
         () => {
 
             window.scrollTo({
-                top:0,
-                behavior:"smooth"
+                top: 0,
+                behavior: "smooth"
             });
 
         }
     );
+
+
+    updateTopButton();
 
 }
 
@@ -222,16 +231,16 @@ const header =
     document.querySelector("header");
 
 
-if(header){
+if (header) {
 
-    function updateHeader(){
+    function updateHeader() {
 
-        if(window.scrollY > 30){
+        if (window.scrollY > 30) {
 
             header.style.boxShadow =
                 "0 8px 25px rgba(0,0,0,.12)";
 
-        }else{
+        } else {
 
             header.style.boxShadow =
                 "none";
@@ -244,8 +253,9 @@ if(header){
     window.addEventListener(
         "scroll",
         updateHeader,
-        { passive:true }
+        { passive: true }
     );
+
 
     updateHeader();
 
@@ -261,9 +271,49 @@ const yearElements =
         "[data-current-year]"
     );
 
+
 yearElements.forEach(element => {
 
     element.textContent =
         new Date().getFullYear();
 
 });
+
+
+/* =========================
+   AUDIO
+========================= */
+
+/*
+   Makes sure only one audio player
+   plays at a time.
+*/
+
+const audioPlayers =
+    document.querySelectorAll("audio");
+
+
+audioPlayers.forEach(audio => {
+
+    audio.addEventListener("play", () => {
+
+        audioPlayers.forEach(otherAudio => {
+
+            if (otherAudio !== audio) {
+                otherAudio.pause();
+            }
+
+        });
+
+    });
+
+});
+
+
+/* =========================
+   PAGE READY
+========================= */
+
+document.documentElement.classList.add(
+    "js-ready"
+);
