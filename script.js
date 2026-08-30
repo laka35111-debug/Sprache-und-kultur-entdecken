@@ -1,27 +1,75 @@
+/* =========================================================
+   SPRACHE UND KULTUR ENTDECKEN
+   Main Website JavaScript
+========================================================= */
+
+
 /* =========================
    DARK MODE
 ========================= */
 
 const darkButton = document.getElementById("darkMode");
 
-/* Load saved dark mode */
-if (localStorage.getItem("darkMode") === "enabled") {
-    document.body.classList.add("dark");
+function updateDarkModeButton(){
+
+    if(!darkButton) return;
+
+    const darkEnabled =
+        document.body.classList.contains("dark");
+
+    darkButton.textContent =
+        darkEnabled ? "☀️" : "🌙";
+
+    darkButton.setAttribute(
+        "aria-label",
+        darkEnabled
+            ? "Hellmodus aktivieren"
+            : "Dunkelmodus aktivieren"
+    );
+
+    darkButton.setAttribute(
+        "title",
+        darkEnabled
+            ? "Hellmodus"
+            : "Dunkelmodus"
+    );
 }
 
-/* Toggle dark mode */
-if (darkButton) {
+
+/* Load saved mode */
+
+const savedMode =
+    localStorage.getItem("darkMode");
+
+if(savedMode === "enabled"){
+
+    document.body.classList.add("dark");
+
+}
+
+updateDarkModeButton();
+
+
+/* Toggle */
+
+if(darkButton){
+
     darkButton.addEventListener("click", () => {
 
         document.body.classList.toggle("dark");
 
-        if (document.body.classList.contains("dark")) {
-            localStorage.setItem("darkMode", "enabled");
-        } else {
-            localStorage.setItem("darkMode", "disabled");
-        }
+        const enabled =
+            document.body.classList.contains("dark");
+
+        localStorage.setItem(
+            "darkMode",
+            enabled ? "enabled" : "disabled"
+        );
+
+        updateDarkModeButton();
 
     });
+
 }
 
 
@@ -31,18 +79,30 @@ if (darkButton) {
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
-    anchor.addEventListener("click", function(e) {
+    anchor.addEventListener("click", function(event){
 
-        e.preventDefault();
+        const targetId =
+            this.getAttribute("href");
 
-        const target = document.querySelector(
-            this.getAttribute("href")
-        );
+        /* Ignore empty # links */
 
-        if (target) {
+        if(
+            !targetId ||
+            targetId === "#"
+        ){
+            return;
+        }
+
+        const target =
+            document.querySelector(targetId);
+
+        if(target){
+
+            event.preventDefault();
 
             target.scrollIntoView({
-                behavior: "smooth"
+                behavior:"smooth",
+                block:"start"
             });
 
         }
@@ -53,55 +113,157 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 /* =========================
-   SCROLL ANIMATION
+   SCROLL REVEAL
 ========================= */
 
-const observer = new IntersectionObserver((entries) => {
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-    entries.forEach(entry => {
 
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
+if("IntersectionObserver" in window){
+
+    const revealObserver =
+        new IntersectionObserver(
+            (entries, observer) => {
+
+                entries.forEach(entry => {
+
+                    if(entry.isIntersecting){
+
+                        entry.target.classList.add(
+                            "visible"
+                        );
+
+                        observer.unobserve(
+                            entry.target
+                        );
+
+                    }
+
+                });
+
+            },
+            {
+                threshold:0.12,
+                rootMargin:"0px 0px -40px 0px"
+            }
+        );
+
+
+    revealElements.forEach(element => {
+
+        revealObserver.observe(element);
 
     });
 
-});
+}else{
 
-document.querySelectorAll("section").forEach(section => {
+    revealElements.forEach(element => {
 
-    section.classList.add("hidden");
-
-    observer.observe(section);
-
-});
-
-
-/* =========================
-   BACK TO TOP BUTTON
-========================= */
-
-const topBtn = document.getElementById("topBtn");
-
-if (topBtn) {
-
-    window.addEventListener("scroll", () => {
-
-        if (window.scrollY > 300) {
-            topBtn.style.display = "block";
-        } else {
-            topBtn.style.display = "none";
-        }
-
-    });
-
-    topBtn.addEventListener("click", () => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
+        element.classList.add("visible");
 
     });
 
 }
+
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+const topBtn =
+    document.getElementById("topBtn");
+
+
+if(topBtn){
+
+    function updateTopButton(){
+
+        if(window.scrollY > 500){
+
+            topBtn.classList.add("show");
+
+        }else{
+
+            topBtn.classList.remove("show");
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateTopButton,
+        { passive:true }
+    );
+
+
+    topBtn.addEventListener(
+        "click",
+        () => {
+
+            window.scrollTo({
+                top:0,
+                behavior:"smooth"
+            });
+
+        }
+    );
+
+}
+
+
+/* =========================
+   HEADER SHADOW
+========================= */
+
+const header =
+    document.querySelector("header");
+
+
+if(header){
+
+    function updateHeader(){
+
+        if(window.scrollY > 30){
+
+            header.style.boxShadow =
+                "0 8px 25px rgba(0,0,0,.12)";
+
+        }else{
+
+            header.style.boxShadow =
+                "none";
+
+        }
+
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        updateHeader,
+        { passive:true }
+    );
+
+    updateHeader();
+
+}
+
+
+/* =========================
+   CURRENT YEAR
+========================= */
+
+const yearElements =
+    document.querySelectorAll(
+        "[data-current-year]"
+    );
+
+yearElements.forEach(element => {
+
+    element.textContent =
+        new Date().getFullYear();
+
+});
