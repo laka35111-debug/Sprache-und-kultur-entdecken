@@ -2231,3 +2231,55 @@ body.dark .unit-navigation .btn-outline:hover {
 
     color: #10283e;
 }
+/* =========================================================
+   DARK MODE TEXT FIX
+========================================================= */
+
+body.dark .unit-card h3,
+body.dark .feature-card h3,
+body.dark .foundations-content h3,
+body.dark .section-heading h2,
+body.dark .about-content h2 {
+    color: #ffffff !important;
+}
+
+body.dark .unit-card p,
+body.dark .feature-card p,
+body.dark .foundations-content p,
+body.dark .section-heading p,
+body.dark .about-content p {
+    color: #b9c5cf !important;
+}
+
+body.dark .unit-card a {
+    color: #ffffff !important;
+}
+
+body.dark .unit-card a span {
+    color: #e34b57 !important;
+}
+
+body.dark .small-label {
+    color: #72b58a !important;
+}
+
+body.dark .unit-number,
+body.dark .feature-number {
+    color: #e34b57 !important;
+}
+
+body.dark .audio-title h3 {
+    color: #ffffff !important;
+}
+
+body.dark .audio-card {
+    color: #ffffff;
+}
+
+body.dark .audio-card h3 {
+    color: #ffffff !important;
+}
+
+body.dark .audio-card p {
+    color: #b9c5cf !important;
+}
