@@ -1,49 +1,45 @@
 /* =========================================================
    SPRACHE UND KULTUR ENTDECKEN
-   ORIGINAL WEBSITE STYLE
-   - Original hero-bg.png background
-   - Floating book cover
-   - Responsive
-   - Dark mode
-   - Unit pages
+   COMPLETE STYLE.CSS
+   Original Background + Floating Book + All Units
 ========================================================= */
 
 
 /* =========================================================
-   1. VARIABLES
+   VARIABLES
 ========================================================= */
 
 :root {
-    --navy: #08233f;
-    --navy-dark: #06182b;
-    --navy-light: #173d5d;
+    --navy: #071a2e;
+    --navy-2: #0d2942;
+    --navy-3: #173c58;
 
-    --red: #b83a45;
-    --red-dark: #922f38;
+    --red: #c73545;
+    --red-dark: #a92837;
 
     --green: #477b5a;
 
-    --yellow: #ffd34f;
-    --yellow-dark: #e8b92f;
+    --gold: #ffd34f;
+    --gold-dark: #e5b72e;
 
     --cream: #f7f2e8;
-    --cream-dark: #eee6d8;
+    --cream-2: #fffdf9;
 
     --white: #ffffff;
 
-    --text: #263746;
-    --text-light: #667580;
+    --text: #17324d;
+    --text-light: #647789;
 
-    --border: #e3ddd2;
+    --border: #e3dccf;
 
-    --shadow: 0 20px 50px rgba(6, 24, 43, 0.15);
+    --shadow: 0 18px 45px rgba(7, 26, 46, 0.12);
 
     --radius: 20px;
 }
 
 
 /* =========================================================
-   2. RESET
+   RESET
 ========================================================= */
 
 * {
@@ -58,7 +54,7 @@ html {
 
 body {
     font-family: "Poppins", Arial, sans-serif;
-    background: var(--cream);
+    background: var(--cream-2);
     color: var(--text);
     line-height: 1.6;
     overflow-x: hidden;
@@ -85,43 +81,24 @@ a {
 
 
 /* =========================================================
-   3. ACCESSIBILITY
-========================================================= */
-
-:focus-visible {
-    outline: 3px solid var(--yellow);
-    outline-offset: 4px;
-}
-
-
-/* =========================================================
-   4. HEADER
+   HEADER
 ========================================================= */
 
 header {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
+
+    min-height: 84px;
 
     z-index: 1000;
 
-    background: rgba(5, 19, 32, 0.96);
+    background: rgba(5, 18, 31, 0.96);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 
     backdrop-filter: blur(12px);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.header-inner {
-    min-height: 84px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
 }
 
 header .container {
@@ -134,35 +111,15 @@ header .container {
     gap: 30px;
 }
 
-
-/* =========================================================
-   LOGO
-========================================================= */
-
 .logo-image {
-    height: 52px;
     width: auto;
-
-    object-fit: contain;
+    height: 52px;
 }
-
-.brand {
-    display: flex;
-    align-items: center;
-
-    text-decoration: none;
-}
-
-
-/* =========================================================
-   NAVIGATION
-========================================================= */
 
 nav {
     display: flex;
     align-items: center;
-
-    gap: 30px;
+    gap: 28px;
 }
 
 nav a {
@@ -171,11 +128,11 @@ nav a {
     text-decoration: none;
 
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 700;
 
     position: relative;
 
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
 
 nav a::after {
@@ -189,13 +146,13 @@ nav a::after {
     width: 0;
     height: 2px;
 
-    background: var(--yellow);
+    background: var(--gold);
 
-    transition: 0.3s ease;
+    transition: 0.25s ease;
 }
 
 nav a:hover {
-    color: var(--yellow);
+    color: var(--gold);
 }
 
 nav a:hover::after {
@@ -213,32 +170,31 @@ nav a:hover::after {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255,255,255,0.25);
 
-    background: rgba(255, 255, 255, 0.08);
+    background: #162d42;
 
     color: white;
 
     cursor: pointer;
 
-    font-size: 18px;
-
     display: flex;
     align-items: center;
     justify-content: center;
+
+    font-size: 19px;
 
     transition: 0.3s ease;
 }
 
 #darkMode:hover {
-    background: rgba(255, 255, 255, 0.18);
-
     transform: rotate(10deg) scale(1.05);
+    background: #24445d;
 }
 
 
 /* =========================================================
-   5. MAIN HERO
+   ORIGINAL HOMEPAGE HERO BACKGROUND
 ========================================================= */
 
 .hero {
@@ -253,20 +209,21 @@ nav a:hover::after {
     display: flex;
     align-items: center;
 
-    padding: 140px 0 80px;
+    padding: 140px 0 90px;
 
     /*
        THIS IS YOUR ORIGINAL BACKGROUND
-       Make sure hero-bg.png is in your images folder.
+       File:
+       images/hero-bg.png
     */
 
     background-image:
         linear-gradient(
             90deg,
-            rgba(4, 24, 48, 0.93) 0%,
-            rgba(4, 24, 48, 0.82) 40%,
-            rgba(4, 24, 48, 0.45) 70%,
-            rgba(4, 24, 48, 0.20) 100%
+            rgba(3, 20, 39, 0.94) 0%,
+            rgba(3, 25, 47, 0.82) 42%,
+            rgba(3, 25, 47, 0.35) 75%,
+            rgba(3, 25, 47, 0.18) 100%
         ),
         url("images/hero-bg.png");
 
@@ -275,10 +232,7 @@ nav a:hover::after {
     background-repeat: no-repeat;
 }
 
-
-/* subtle dark overlay */
-
-.hero::after {
+.hero::before {
     content: "";
 
     position: absolute;
@@ -287,103 +241,97 @@ nav a:hover::after {
 
     background:
         linear-gradient(
-            90deg,
-            rgba(3, 19, 36, 0.25),
-            transparent 65%
+            180deg,
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.08)
         );
 
     pointer-events: none;
 }
 
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
-
 .hero-content {
-    width: min(1120px, 90%);
+    width: min(1200px, 90%);
 
     margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: 1fr 0.9fr;
+    grid-template-columns: 1.05fr 0.95fr;
 
     align-items: center;
 
-    gap: 70px;
+    gap: 60px;
 
     position: relative;
 
     z-index: 2;
 }
 
+
+/* =========================================================
+   HERO TEXT
+========================================================= */
+
 .hero-text {
     max-width: 650px;
 }
 
-
-/* =========================================================
-   HERO LABEL
-========================================================= */
-
 .eyebrow {
     display: inline-flex;
+
     align-items: center;
+
+    gap: 8px;
+
+    background: var(--gold);
+
+    color: #10253a;
 
     padding: 9px 18px;
 
-    border-radius: 30px;
-
-    background: var(--yellow);
-
-    color: #10283e;
+    border-radius: 50px;
 
     font-size: 13px;
 
-    font-weight: 700;
+    font-weight: 800;
+
+    letter-spacing: 0.3px;
 
     margin-bottom: 25px;
 }
 
-
-/* =========================================================
-   HERO TITLE
-========================================================= */
+.eyebrow::before {
+    display: none;
+}
 
 .hero h1 {
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: clamp(48px, 6vw, 76px);
 
-    line-height: 1.02;
+    line-height: 1.03;
 
     letter-spacing: -2px;
 
     color: white;
 
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 }
 
 .hero h1 span {
-    color: var(--yellow);
+    color: var(--gold);
 }
-
-
-/* =========================================================
-   HERO DESCRIPTION
-========================================================= */
 
 .hero-description {
     max-width: 620px;
 
-    color: rgba(255, 255, 255, 0.9);
-
-    font-size: 17px;
+    font-size: 18px;
 
     line-height: 1.8;
 
-    margin-bottom: 32px;
+    color: rgba(255,255,255,0.9);
+
+    margin-bottom: 35px;
 }
 
 
@@ -398,7 +346,7 @@ nav a:hover::after {
 
     flex-wrap: wrap;
 
-    gap: 14px;
+    gap: 15px;
 }
 
 .btn {
@@ -409,7 +357,7 @@ nav a:hover::after {
 
     gap: 8px;
 
-    padding: 14px 26px;
+    padding: 14px 25px;
 
     border-radius: 50px;
 
@@ -421,54 +369,51 @@ nav a:hover::after {
 
     border: none;
 
+    cursor: pointer;
+
     transition: 0.3s ease;
 }
 
-
-/* yellow button */
-
 .btn-primary,
 .btn-yellow {
-    background: var(--yellow);
+    background: var(--gold);
 
-    color: #10283e;
+    color: #14283c;
 
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.14);
 }
 
 .btn-primary:hover,
 .btn-yellow:hover {
-    background: #ffe06e;
+    background: #ffe070;
 
     transform: translateY(-3px);
 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
-
-
-/* white button */
 
 .btn-secondary {
     background: white;
 
     color: var(--navy);
+
+    border: 1px solid white;
 }
 
 .btn-secondary:hover {
-    background: #f3f3f3;
+    background: transparent;
+
+    color: white;
 
     transform: translateY(-3px);
 }
 
-
-/* outline button */
-
 .btn-outline {
-    border: 1px solid var(--navy);
-
     background: transparent;
 
     color: var(--navy);
+
+    border: 1px solid var(--navy);
 }
 
 .btn-outline:hover {
@@ -479,9 +424,106 @@ nav a:hover::after {
     transform: translateY(-3px);
 }
 
+.btn-light {
+    background: white;
+
+    color: var(--navy);
+}
+
+.btn-light:hover {
+    background: var(--gold);
+
+    transform: translateY(-3px);
+}
+
 
 /* =========================================================
-   HERO STATS
+   HERO BOOK
+   FLOATING BOOK
+========================================================= */
+
+.hero-book {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 580px;
+}
+
+.book-glow {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 211, 79, 0.14);
+
+    filter: blur(25px);
+
+    z-index: 0;
+}
+
+.book-frame {
+    position: relative;
+
+    z-index: 2;
+
+    width: min(430px, 85%);
+
+    border-radius: 18px;
+
+    overflow: visible;
+
+    transform: rotate(2deg);
+
+    filter: drop-shadow(0 30px 35px rgba(0,0,0,0.38));
+
+    animation: floatingBook 5s ease-in-out infinite;
+
+    transition: 0.4s ease;
+}
+
+.book-frame img {
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 14px;
+}
+
+.book-frame:hover {
+    transform: rotate(0deg) translateY(-10px) scale(1.02);
+
+    animation-play-state: paused;
+}
+
+@keyframes floatingBook {
+
+    0% {
+        transform: rotate(2deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(2deg) translateY(-14px);
+    }
+
+    100% {
+        transform: rotate(2deg) translateY(0);
+    }
+}
+
+.book-caption {
+    display: none;
+}
+
+
+/* =========================================================
+   HERO META
 ========================================================= */
 
 .hero-meta {
@@ -501,17 +543,17 @@ nav a:hover::after {
 }
 
 .hero-meta strong {
+    color: white;
+
     font-family: Georgia, "Times New Roman", serif;
 
     font-size: 25px;
-
-    color: white;
 }
 
 .hero-meta span {
-    font-size: 11px;
+    color: rgba(255,255,255,0.65);
 
-    color: rgba(255, 255, 255, 0.65);
+    font-size: 11px;
 
     text-transform: uppercase;
 
@@ -523,159 +565,12 @@ nav a:hover::after {
 
     height: 35px;
 
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255,255,255,0.25);
 }
 
 
 /* =========================================================
-   6. FLOATING BOOK
-========================================================= */
-
-.hero-book {
-    position: relative;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    min-height: 560px;
-}
-
-
-/* golden glow behind book */
-
-.book-glow {
-    position: absolute;
-
-    width: 430px;
-    height: 430px;
-
-    border-radius: 50%;
-
-    background: rgba(255, 211, 79, 0.12);
-
-    filter: blur(35px);
-
-    pointer-events: none;
-}
-
-
-/* =========================================================
-   BOOK FRAME
-========================================================= */
-
-.book-frame {
-    position: relative;
-
-    width: min(410px, 88%);
-
-    padding: 0;
-
-    background: transparent;
-
-    border-radius: 18px;
-
-    box-shadow:
-        0 35px 70px rgba(0, 0, 0, 0.42),
-        0 10px 20px rgba(0, 0, 0, 0.2);
-
-    transform: rotate(2deg);
-
-    animation: floatingBook 4.5s ease-in-out infinite;
-
-    transition: 0.4s ease;
-
-    z-index: 3;
-}
-
-
-/*
-   THE FLOATING ANIMATION
-*/
-
-@keyframes floatingBook {
-
-    0% {
-        transform: translateY(0) rotate(2deg);
-    }
-
-    50% {
-        transform: translateY(-16px) rotate(1deg);
-    }
-
-    100% {
-        transform: translateY(0) rotate(2deg);
-    }
-}
-
-
-/* stop animation slightly on hover */
-
-.book-frame:hover {
-    animation-play-state: paused;
-
-    transform: translateY(-10px) rotate(0deg);
-
-    box-shadow:
-        0 45px 85px rgba(0, 0, 0, 0.48),
-        0 15px 25px rgba(0, 0, 0, 0.22);
-}
-
-
-/* book image */
-
-.book-frame img {
-    width: 100%;
-
-    height: auto;
-
-    border-radius: 12px;
-
-    display: block;
-}
-
-
-/* =========================================================
-   BOOK CAPTION
-========================================================= */
-
-.book-caption {
-    position: relative;
-
-    margin-top: 20px;
-
-    text-align: center;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 2px;
-}
-
-.book-caption span {
-    color: rgba(255, 255, 255, 0.6);
-
-    font-size: 10px;
-
-    text-transform: uppercase;
-
-    letter-spacing: 1.5px;
-}
-
-.book-caption strong {
-    color: white;
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   7. INTRO STRIP
+   INTRO STRIP
 ========================================================= */
 
 .intro-strip {
@@ -683,13 +578,13 @@ nav a:hover::after {
 
     border-bottom: 1px solid var(--border);
 
-    box-shadow: 0 8px 25px rgba(23, 50, 77, 0.04);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
 }
 
 .intro-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 }
 
 .intro-item {
@@ -698,7 +593,6 @@ nav a:hover::after {
     display: flex;
 
     align-items: center;
-
     justify-content: center;
 
     gap: 14px;
@@ -741,7 +635,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   8. GENERAL SECTIONS
+   GENERAL SECTIONS
 ========================================================= */
 
 .section {
@@ -749,7 +643,7 @@ nav a:hover::after {
 }
 
 .section-heading {
-    max-width: 680px;
+    max-width: 700px;
 
     margin: 0 auto 55px;
 
@@ -765,13 +659,13 @@ nav a:hover::after {
 
     letter-spacing: 2px;
 
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 
 .section-heading h2 {
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(36px, 5vw, 52px);
+    font-size: clamp(35px, 5vw, 52px);
 
     line-height: 1.15;
 
@@ -792,7 +686,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   9. FEATURES
+   FEATURES
 ========================================================= */
 
 .features {
@@ -802,7 +696,7 @@ nav a:hover::after {
 .feature-grid {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4,1fr);
 
     gap: 20px;
 }
@@ -820,9 +714,9 @@ nav a:hover::after {
 
     padding: 30px 27px;
 
-    min-height: 275px;
+    min-height: 270px;
 
-    box-shadow: 0 8px 25px rgba(23, 50, 77, 0.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.04);
 
     transition: 0.35s ease;
 }
@@ -841,11 +735,11 @@ nav a:hover::after {
 
     place-items: center;
 
-    border-radius: 16px;
-
     background: var(--cream);
 
-    font-size: 26px;
+    border-radius: 15px;
+
+    font-size: 25px;
 
     margin-bottom: 22px;
 }
@@ -856,7 +750,7 @@ nav a:hover::after {
     top: 25px;
     right: 25px;
 
-    color: #cfc5b7;
+    color: #c8c0b4;
 
     font-size: 11px;
 
@@ -883,7 +777,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   10. UNITS
+   UNITS SECTION
 ========================================================= */
 
 .units {
@@ -932,7 +826,7 @@ nav a:hover::after {
 
     font-size: 28px;
 
-    box-shadow: 0 8px 20px rgba(23, 50, 77, 0.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.07);
 }
 
 .small-label {
@@ -983,8 +877,6 @@ nav a:hover::after {
     background: var(--green);
 
     color: white;
-
-    transform: translateY(-2px);
 }
 
 
@@ -995,7 +887,7 @@ nav a:hover::after {
 .units-grid {
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3,1fr);
 
     gap: 20px;
 }
@@ -1015,7 +907,7 @@ nav a:hover::after {
 
     flex-direction: column;
 
-    box-shadow: 0 7px 22px rgba(23, 50, 77, 0.045);
+    box-shadow: 0 7px 22px rgba(0,0,0,0.045);
 
     transition: 0.35s ease;
 }
@@ -1024,6 +916,8 @@ nav a:hover::after {
     transform: translateY(-7px);
 
     box-shadow: var(--shadow);
+
+    border-color: #d4c8b8;
 }
 
 .unit-top {
@@ -1089,7 +983,6 @@ nav a:hover::after {
     display: flex;
 
     align-items: center;
-
     justify-content: space-between;
 
     color: var(--navy);
@@ -1125,7 +1018,7 @@ nav a:hover::after {
 
 
 /* =========================================================
-   11. ABOUT
+   ABOUT
 ========================================================= */
 
 .about {
@@ -1156,7 +1049,7 @@ nav a:hover::after {
     width: 300px;
     height: 400px;
 
-    border: 1px solid var(--yellow);
+    border: 1px solid var(--gold);
 
     border-radius: 20px;
 
@@ -1172,7 +1065,7 @@ nav a:hover::after {
 
     border-radius: 14px;
 
-    box-shadow: 0 25px 55px rgba(23, 50, 77, 0.18);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.18);
 
     transform: rotate(3deg);
 
@@ -1192,7 +1085,7 @@ nav a:hover::after {
 
     color: var(--navy);
 
-    font-size: clamp(40px, 5vw, 58px);
+    font-size: clamp(40px,5vw,58px);
 
     line-height: 1.08;
 
@@ -1245,16 +1138,15 @@ nav a:hover::after {
 
 
 /* =========================================================
-   12. CTA
+   CTA
 ========================================================= */
 
 .cta {
-    background:
-        linear-gradient(
-            120deg,
-            var(--navy),
-            #28546b
-        );
+    background: linear-gradient(
+        120deg,
+        var(--navy),
+        #28546b
+    );
 
     color: white;
 
@@ -1268,7 +1160,7 @@ nav a:hover::after {
 .cta-content {
     position: relative;
 
-    z-index: 1;
+    z-index: 2;
 
     display: flex;
 
@@ -1280,13 +1172,13 @@ nav a:hover::after {
 }
 
 .light-label {
-    color: var(--yellow);
+    color: var(--gold);
 }
 
 .cta h2 {
     font-family: Georgia, "Times New Roman", serif;
 
-    font-size: clamp(35px, 5vw, 50px);
+    font-size: clamp(35px,5vw,50px);
 
     line-height: 1.1;
 
@@ -1294,34 +1186,20 @@ nav a:hover::after {
 }
 
 .cta p {
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.btn-light {
-    background: white;
-
-    color: var(--navy);
-
-    white-space: nowrap;
-}
-
-.btn-light:hover {
-    background: #f3dfaa;
-
-    transform: translateY(-3px);
+    color: rgba(255,255,255,0.7);
 }
 
 
 /* =========================================================
-   13. FOOTER
+   FOOTER
 ========================================================= */
 
 footer {
-    background: #06182b;
+    background: #071522;
 
     color: white;
 
-    padding: 45px 0 25px;
+    padding: 55px 0 25px;
 }
 
 .footer-content {
@@ -1331,7 +1209,7 @@ footer {
 
     gap: 50px;
 
-    padding-bottom: 35px;
+    padding-bottom: 40px;
 }
 
 .footer-brand {
@@ -1347,7 +1225,7 @@ footer {
 }
 
 .footer-brand p {
-    color: rgba(255, 255, 255, 0.55);
+    color: rgba(255,255,255,0.55);
 
     font-size: 13px;
 
@@ -1365,7 +1243,7 @@ footer {
 }
 
 .footer-links a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255,255,255,0.7);
 
     text-decoration: none;
 
@@ -1375,11 +1253,11 @@ footer {
 }
 
 .footer-links a:hover {
-    color: var(--yellow);
+    color: var(--gold);
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(255,255,255,0.1);
 
     padding-top: 22px;
 
@@ -1387,16 +1265,14 @@ footer {
 
     justify-content: space-between;
 
-    gap: 20px;
-
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255,255,255,0.4);
 
     font-size: 11px;
 }
 
 
 /* =========================================================
-   14. TOP BUTTON
+   TOP BUTTON
 ========================================================= */
 
 #topBtn {
@@ -1405,8 +1281,8 @@ footer {
     right: 25px;
     bottom: 25px;
 
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
 
     border: none;
 
@@ -1431,11 +1307,11 @@ footer {
 
     transform: translateY(15px);
 
-    box-shadow: 0 10px 25px rgba(23, 50, 77, 0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 
     transition: 0.3s ease;
 
-    z-index: 999;
+    z-index: 9999;
 }
 
 #topBtn.show {
@@ -1449,151 +1325,159 @@ footer {
 #topBtn:hover {
     background: var(--red-dark);
 
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
 
 
 /* =========================================================
-   UNIT HERO — ORIGINAL BACKGROUND
+   UNIT PAGES
 ========================================================= */
 
-.unit-hero{
-    min-height:620px;
+.unit-hero {
+    min-height: 650px;
 
-    padding:150px 0 90px;
+    padding: 150px 0 90px;
 
-    position:relative;
-    overflow:hidden;
+    color: white;
 
-    color:white;
+    position: relative;
+
+    overflow: hidden;
+
+    /*
+       Use the ORIGINAL background here too.
+       This makes the unit pages match the old design.
+    */
 
     background-image:
         linear-gradient(
             90deg,
-            rgba(5,25,48,.94) 0%,
-            rgba(8,35,61,.82) 42%,
-            rgba(20,66,82,.55) 100%
+            rgba(7, 26, 46, 0.94),
+            rgba(23, 60, 88, 0.72)
         ),
-        url("hero-bg.png");
+        url("images/hero-bg.png");
 
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
 }
 
-.unit-hero-content{
-    position:relative;
-    z-index:2;
+.unit-hero-content {
+    display: grid;
 
-    display:grid;
+    grid-template-columns: 1fr 1fr;
 
-    grid-template-columns:1fr 1fr;
+    align-items: center;
 
-    align-items:center;
-
-    gap:80px;
+    gap: 70px;
 }
 
-.unit-text{
-    max-width:600px;
+.unit-text {
+    max-width: 600px;
 }
 
-.unit-text .badge{
-    background:#ffd34f;
-    color:#10263b;
+.unit-text .badge {
+    display: inline-block;
 
-    display:inline-block;
+    background: var(--gold);
 
-    padding:8px 18px;
+    color: #14283c;
 
-    border-radius:30px;
+    padding: 8px 17px;
 
-    font-size:12px;
-    font-weight:800;
+    border-radius: 30px;
 
-    margin-bottom:20px;
+    font-size: 12px;
+
+    font-weight: 800;
+
+    margin-bottom: 20px;
 }
 
-.unit-text h1{
-    font-family:'Playfair Display',serif;
+.unit-text h1 {
+    font-family: Georgia, "Times New Roman", serif;
 
-    color:white;
+    color: white;
 
-    font-size:clamp(48px,6vw,70px);
+    font-size: clamp(48px,6vw,70px);
 
-    line-height:1.05;
+    line-height: 1.05;
 
-    margin-bottom:22px;
+    margin-bottom: 22px;
 }
 
-.unit-text p{
-    color:rgba(255,255,255,.86);
+.unit-text p {
+    color: rgba(255,255,255,0.85);
 
-    font-size:17px;
+    font-size: 17px;
 
-    line-height:1.8;
+    line-height: 1.8;
 
-    max-width:530px;
+    max-width: 530px;
 
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 
-/* BOOK */
+/* =========================================================
+   UNIT PAGE BOOK
+   FLOATING
+========================================================= */
 
-.unit-book{
-    display:flex;
+.unit-book {
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    position:relative;
+    position: relative;
 
-    z-index:3;
+    min-height: 480px;
 }
 
-.unit-book img{
-    width:360px;
-    max-width:90%;
+.unit-book img {
+    width: min(390px, 85%);
 
-    border-radius:16px;
+    height: auto;
 
-    box-shadow:
-        0 30px 60px rgba(0,0,0,.35);
+    border-radius: 15px;
 
-    transform:rotate(2deg);
+    filter: drop-shadow(0 30px 35px rgba(0,0,0,0.4));
 
-    transition:
-        transform .4s ease,
-        box-shadow .4s ease;
+    transform: rotate(2deg);
+
+    animation: floatingUnitBook 5s ease-in-out infinite;
+
+    transition: 0.4s ease;
 }
 
-.unit-book img:hover{
-    transform:rotate(0deg) translateY(-8px);
+.unit-book img:hover {
+    animation-play-state: paused;
 
-    box-shadow:
-        0 40px 75px rgba(0,0,0,.45);
+    transform: rotate(0deg) translateY(-10px) scale(1.02);
 }
 
 @keyframes floatingUnitBook {
 
     0% {
-        transform: translateY(0) rotate(2deg);
+        transform: rotate(2deg) translateY(0);
     }
 
     50% {
-        transform: translateY(-12px) rotate(1deg);
+        transform: rotate(2deg) translateY(-12px);
     }
 
     100% {
-        transform: translateY(0) rotate(2deg);
+        transform: rotate(2deg) translateY(0);
     }
 }
 
 
 /* =========================================================
-   16. AUDIO SECTION
+   AUDIO SECTION
 ========================================================= */
 
 .audio-section {
@@ -1607,26 +1491,18 @@ footer {
 
     color: var(--navy);
 
-    font-size: 40px;
+    font-size: 38px;
+
+    margin-bottom: 35px;
 
     text-align: center;
-
-    margin-bottom: 40px;
-}
-
-.audio-list {
-    max-width: 900px;
-
-    margin: auto;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 18px;
 }
 
 .audio-card {
+    max-width: 900px;
+
+    margin: 0 auto 18px;
+
     display: flex;
 
     align-items: center;
@@ -1639,17 +1515,17 @@ footer {
 
     border-radius: 20px;
 
-    padding: 25px 28px;
+    padding: 24px 28px;
 
-    box-shadow: 0 8px 25px rgba(23, 50, 77, 0.05);
+    box-shadow: 0 8px 25px rgba(23,50,77,0.05);
 
-    transition: 0.35s ease;
+    transition: 0.3s ease;
 }
 
 .audio-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
 
-    box-shadow: 0 18px 40px rgba(23, 50, 77, 0.11);
+    box-shadow: 0 18px 40px rgba(23,50,77,0.11);
 }
 
 .audio-number {
@@ -1697,7 +1573,7 @@ footer {
 
 
 /* =========================================================
-   17. UNIT NAVIGATION
+   UNIT NAVIGATION
 ========================================================= */
 
 .unit-navigation {
@@ -1709,11 +1585,11 @@ footer {
 .nav-buttons {
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
 
-    gap: 20px;
+    justify-content: space-between;
+
+    gap: 15px;
 
     padding-top: 30px;
 
@@ -1722,107 +1598,152 @@ footer {
 
 
 /* =========================================================
-   18. DARK MODE
+   DARK MODE
 ========================================================= */
 
 body.dark {
-    --cream: #101a24;
-    --cream-dark: #172432;
-
-    --text: #edf2f5;
-    --text-light: #aab7c1;
-
-    --border: #293b4a;
-
-    background: #101a24;
+    background: #0b1722;
 
     color: #edf2f5;
+
+    --text: #edf2f5;
+
+    --text-light: #aebbc5;
+
+    --border: #2a3d4e;
 }
 
 body.dark .intro-strip {
-    background: #172432;
+    background: #142433;
 
-    border-color: #293b4a;
+    border-color: #293d4d;
 }
 
 body.dark .intro-item {
-    border-color: #293b4a;
+    border-color: #293d4d;
 }
 
 body.dark .intro-icon {
-    background: #213342;
+    background: #203546;
 }
 
 body.dark .features {
-    background: #101a24;
+    background: #0b1722;
 }
 
-body.dark .feature-card,
-body.dark .unit-card {
-    background: #172432;
+body.dark .feature-card {
+    background: #162635;
 
-    border-color: #293b4a;
+    border-color: #293d4d;
 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-body.dark .feature-icon,
-body.dark .unit-icon {
-    background: #213342;
+body.dark .feature-card h3 {
+    color: #ffffff;
+}
+
+body.dark .feature-icon {
+    background: #203546;
 }
 
 body.dark .units {
-    background: #0e1821;
+    background: #0b1722;
+}
+
+body.dark .unit-card {
+    background: #162635;
+
+    border-color: #293d4d;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+body.dark .unit-card h3 {
+    color: #ffffff;
+}
+
+body.dark .unit-card a {
+    color: #ffffff;
+
+    border-color: #293d4d;
+}
+
+body.dark .unit-icon {
+    background: #203546;
 }
 
 body.dark .foundations-card {
-    background:
-        linear-gradient(
-            100deg,
-            #1d3027,
-            #202b34
-        );
+    background: linear-gradient(
+        100deg,
+        #1b3027,
+        #1c2b37
+    );
 
     border-color: #30483a;
 }
 
+body.dark .foundations-content h3 {
+    color: white;
+}
+
 body.dark .foundations-icon {
-    background: #172432;
+    background: #162635;
 }
 
 body.dark .about {
-    background: #101a24;
+    background: #0b1722;
+}
+
+body.dark .about-content h2 {
+    color: white;
 }
 
 body.dark .about-points div {
-    background: #172432;
+    background: #162635;
 
-    border-color: #293b4a;
+    border-color: #293d4d;
+
+    color: #edf2f5;
 }
 
-body.dark .audio-section,
-body.dark .unit-navigation {
-    background: #0e1821;
+body.dark .section-heading h2 {
+    color: white;
+}
+
+body.dark .audio-section {
+    background: #0b1722;
+}
+
+body.dark .audio-section h2 {
+    color: white;
 }
 
 body.dark .audio-card {
-    background: #172432;
+    background: #162635;
 
-    border-color: #293b4a;
+    border-color: #293d4d;
 }
 
-body.dark .audio-content h3,
-body.dark .audio-section h2 {
-    color: #f3f5f6;
+body.dark .audio-content h3 {
+    color: white;
 }
 
-body.dark .unit-navigation .btn-outline {
+body.dark .unit-navigation {
+    background: #0b1722;
+}
+
+body.dark .nav-buttons {
+    border-color: #293d4d;
+}
+
+body.dark .btn-outline {
     color: white;
 
-    border-color: #526474;
+    border-color: #607789;
 }
 
-body.dark .unit-navigation .btn-outline:hover {
+body.dark .btn-outline:hover {
     background: white;
 
     color: var(--navy);
@@ -1830,7 +1751,7 @@ body.dark .unit-navigation .btn-outline:hover {
 
 
 /* =========================================================
-   19. RESPONSIVE — TABLET
+   RESPONSIVE
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1844,7 +1765,7 @@ body.dark .unit-navigation .btn-outline:hover {
     }
 
     .hero-text {
-        margin: auto;
+        margin: 0 auto;
     }
 
     .hero-description {
@@ -1861,21 +1782,15 @@ body.dark .unit-navigation .btn-outline:hover {
     }
 
     .hero-book {
-        order: 2;
-
-        min-height: 500px;
-    }
-
-    .book-frame {
-        width: min(360px, 70%);
+        min-height: 480px;
     }
 
     .feature-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .units-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .about-grid {
@@ -1909,23 +1824,22 @@ body.dark .unit-navigation .btn-outline:hover {
         margin-right: auto;
     }
 
-    .unit-book img {
-        width: 320px;
+    .unit-book {
+        min-height: 450px;
     }
 }
 
 
 /* =========================================================
-   20. RESPONSIVE — MOBILE
+   TABLET / MOBILE
 ========================================================= */
 
 @media (max-width: 760px) {
 
-    header .container,
-    .header-inner {
+    header .container {
         min-height: auto;
 
-        padding: 12px 0;
+        padding: 13px 0;
 
         flex-direction: column;
 
@@ -1943,7 +1857,7 @@ body.dark .unit-navigation .btn-outline:hover {
 
         flex-wrap: wrap;
 
-        gap: 12px 20px;
+        gap: 12px 18px;
     }
 
     nav a {
@@ -1955,62 +1869,32 @@ body.dark .unit-navigation .btn-outline:hover {
         height: 38px;
     }
 
-
-    /* HERO */
-
     .hero {
-        min-height: auto;
+        padding-top: 190px;
 
-        padding: 175px 0 70px;
+        background-position: center;
     }
 
     .hero h1 {
-        font-size: clamp(43px, 12vw, 62px);
+        font-size: clamp(43px, 11vw, 65px);
 
         letter-spacing: -1px;
     }
 
     .hero-description {
-        font-size: 15px;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-
-        width: 100%;
-    }
-
-    .hero-buttons .btn {
-        width: 100%;
-    }
-
-    .hero-meta {
-        gap: 15px;
-
-        margin-top: 35px;
-    }
-
-    .hero-meta strong {
-        font-size: 21px;
-    }
-
-    .hero-meta span {
-        font-size: 9px;
+        font-size: 16px;
     }
 
     .hero-book {
-        min-height: 430px;
+        min-height: 420px;
     }
 
     .book-frame {
         width: 75%;
     }
 
-
-    /* INTRO */
-
     .intro-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
     }
 
     .intro-item {
@@ -2023,9 +1907,6 @@ body.dark .unit-navigation .btn-outline:hover {
         border-right: none;
     }
 
-
-    /* SECTIONS */
-
     .section {
         padding: 75px 0;
     }
@@ -2034,9 +1915,6 @@ body.dark .unit-navigation .btn-outline:hover {
     .units-grid {
         grid-template-columns: 1fr;
     }
-
-
-    /* FOUNDATIONS */
 
     .foundations-card {
         grid-template-columns: auto 1fr;
@@ -2048,17 +1926,11 @@ body.dark .unit-navigation .btn-outline:hover {
         justify-self: start;
     }
 
-
-    /* CTA */
-
     .cta-content {
         flex-direction: column;
 
         align-items: flex-start;
     }
-
-
-    /* FOOTER */
 
     .footer-content {
         flex-direction: column;
@@ -2070,39 +1942,28 @@ body.dark .unit-navigation .btn-outline:hover {
         text-align: center;
     }
 
-
-    /* UNIT PAGE */
+    /* UNIT MOBILE */
 
     .unit-hero {
-        padding-top: 180px;
-
-        padding-bottom: 70px;
+        padding-top: 190px;
     }
 
     .unit-hero-content {
         grid-template-columns: 1fr;
 
-        gap: 45px;
-    }
-
-    .unit-text {
-        margin: auto;
+        gap: 35px;
     }
 
     .unit-text h1 {
-        font-size: clamp(42px, 11vw, 60px);
+        font-size: clamp(43px, 11vw, 65px);
     }
 
     .unit-book {
-        order: 2;
+        min-height: 400px;
     }
 
     .unit-book img {
-        width: 70%;
-    }
-
-    .audio-section {
-        padding: 70px 0;
+        width: 72%;
     }
 
     .audio-card {
@@ -2121,19 +1982,15 @@ body.dark .unit-navigation .btn-outline:hover {
     }
 
     .nav-buttons {
-        flex-direction: column;
+        flex-wrap: wrap;
 
-        align-items: stretch;
-    }
-
-    .nav-buttons .btn {
-        width: 100%;
+        justify-content: center;
     }
 }
 
 
 /* =========================================================
-   21. SMALL PHONES
+   SMALL MOBILE
 ========================================================= */
 
 @media (max-width: 500px) {
@@ -2142,12 +1999,14 @@ body.dark .unit-navigation .btn-outline:hover {
         width: 88%;
     }
 
-    .hero {
-        padding-top: 180px;
+    .hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
     }
 
-    .hero h1 {
-        font-size: 43px;
+    .hero-buttons .btn {
+        width: 100%;
     }
 
     .hero-meta {
@@ -2158,22 +2017,26 @@ body.dark .unit-navigation .btn-outline:hover {
         gap: 8px;
     }
 
-    .meta-line {
-        height: 30px;
+    .hero-meta strong {
+        font-size: 20px;
     }
 
-    .hero-book {
-        min-height: 380px;
+    .meta-line {
+        height: 30px;
     }
 
     .book-frame {
         width: 82%;
     }
 
+    .hero-book {
+        min-height: 380px;
+    }
+
     .intro-item {
         justify-content: flex-start;
 
-        padding-left: 18px;
+        padding-left: 15px;
     }
 
     .intro-icon {
@@ -2201,8 +2064,17 @@ body.dark .unit-navigation .btn-outline:hover {
 
     #topBtn {
         right: 18px;
-
         bottom: 18px;
+    }
+
+    /* UNIT */
+
+    .unit-book {
+        min-height: 350px;
+    }
+
+    .unit-book img {
+        width: 82%;
     }
 
     .audio-card {
@@ -2214,14 +2086,39 @@ body.dark .unit-navigation .btn-outline:hover {
         height: 48px;
     }
 
-    .unit-book img {
-        width: 80%;
+    .audio-content {
+        width: 100%;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+    }
+
+    .nav-buttons .btn {
+        width: 100%;
     }
 }
 
 
 /* =========================================================
-   22. REDUCED MOTION
+   ACCESSIBILITY
+========================================================= */
+
+:focus-visible {
+    outline: 3px solid var(--gold);
+
+    outline-offset: 4px;
+}
+
+::selection {
+    background: var(--gold);
+
+    color: #14283c;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
 ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -2244,67 +2141,4 @@ body.dark .unit-navigation .btn-outline:hover {
     .unit-book img {
         animation: none;
     }
-}
-
-
-/* =========================================================
-   23. TEXT SELECTION
-========================================================= */
-
-::selection {
-    background: var(--yellow);
-
-    color: #10283e;
-}
-/* =========================================================
-   DARK MODE TEXT FIX
-========================================================= */
-
-body.dark .unit-card h3,
-body.dark .feature-card h3,
-body.dark .foundations-content h3,
-body.dark .section-heading h2,
-body.dark .about-content h2 {
-    color: #ffffff !important;
-}
-
-body.dark .unit-card p,
-body.dark .feature-card p,
-body.dark .foundations-content p,
-body.dark .section-heading p,
-body.dark .about-content p {
-    color: #b9c5cf !important;
-}
-
-body.dark .unit-card a {
-    color: #ffffff !important;
-}
-
-body.dark .unit-card a span {
-    color: #e34b57 !important;
-}
-
-body.dark .small-label {
-    color: #72b58a !important;
-}
-
-body.dark .unit-number,
-body.dark .feature-number {
-    color: #e34b57 !important;
-}
-
-body.dark .audio-title h3 {
-    color: #ffffff !important;
-}
-
-body.dark .audio-card {
-    color: #ffffff;
-}
-
-body.dark .audio-card h3 {
-    color: #ffffff !important;
-}
-
-body.dark .audio-card p {
-    color: #b9c5cf !important;
 }
