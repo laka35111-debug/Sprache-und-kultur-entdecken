@@ -1454,101 +1454,126 @@ footer {
 
 
 /* =========================================================
-   15. UNIT PAGES
+   UNIT HERO — ORIGINAL BACKGROUND
 ========================================================= */
 
-.unit-hero {
-    min-height: 620px;
+.unit-hero{
+    min-height:620px;
 
-    padding: 150px 0 90px;
+    padding:150px 0 90px;
 
-    background:
+    position:relative;
+    overflow:hidden;
+
+    color:white;
+
+    background-image:
         linear-gradient(
-            120deg,
-            #17324d,
-            #28556a
-        );
+            90deg,
+            rgba(5,25,48,.94) 0%,
+            rgba(8,35,61,.82) 42%,
+            rgba(20,66,82,.55) 100%
+        ),
+        url("hero-bg.png");
 
-    color: white;
-
-    position: relative;
-
-    overflow: hidden;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
 }
 
-.unit-hero-content {
-    display: grid;
+.unit-hero-content{
+    position:relative;
+    z-index:2;
 
-    grid-template-columns: 1fr 1fr;
+    display:grid;
 
-    align-items: center;
+    grid-template-columns:1fr 1fr;
 
-    gap: 70px;
+    align-items:center;
+
+    gap:80px;
 }
 
-.unit-text {
-    max-width: 600px;
+.unit-text{
+    max-width:600px;
 }
 
-.unit-text .badge {
-    background: var(--yellow);
+.unit-text .badge{
+    background:#ffd34f;
+    color:#10263b;
 
-    color: #172b3d;
+    display:inline-block;
 
-    display: inline-block;
+    padding:8px 18px;
 
-    padding: 7px 17px;
+    border-radius:30px;
 
-    border-radius: 30px;
+    font-size:12px;
+    font-weight:800;
 
-    font-size: 12px;
-
-    font-weight: 800;
-
-    margin-bottom: 20px;
+    margin-bottom:20px;
 }
 
-.unit-text h1 {
-    font-family: Georgia, "Times New Roman", serif;
+.unit-text h1{
+    font-family:'Playfair Display',serif;
 
-    font-size: clamp(45px, 6vw, 68px);
+    color:white;
 
-    line-height: 1.05;
+    font-size:clamp(48px,6vw,70px);
 
-    margin-bottom: 22px;
+    line-height:1.05;
+
+    margin-bottom:22px;
 }
 
-.unit-text p {
-    color: rgba(255, 255, 255, 0.8);
+.unit-text p{
+    color:rgba(255,255,255,.86);
 
-    font-size: 17px;
+    font-size:17px;
 
-    line-height: 1.8;
+    line-height:1.8;
 
-    max-width: 530px;
+    max-width:530px;
 
-    margin-bottom: 30px;
+    margin-bottom:30px;
 }
 
-.unit-book {
-    display: flex;
 
-    justify-content: center;
+/* BOOK */
 
-    position: relative;
+.unit-book{
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:3;
 }
 
-.unit-book img {
-    width: min(360px, 80%);
+.unit-book img{
+    width:360px;
+    max-width:90%;
 
-    border-radius: 14px;
+    border-radius:16px;
 
     box-shadow:
-        0 30px 60px rgba(0, 0, 0, 0.35);
+        0 30px 60px rgba(0,0,0,.35);
 
-    transform: rotate(2deg);
+    transform:rotate(2deg);
 
-    animation: floatingUnitBook 4.5s ease-in-out infinite;
+    transition:
+        transform .4s ease,
+        box-shadow .4s ease;
+}
+
+.unit-book img:hover{
+    transform:rotate(0deg) translateY(-8px);
+
+    box-shadow:
+        0 40px 75px rgba(0,0,0,.45);
 }
 
 @keyframes floatingUnitBook {
