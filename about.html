@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Arjin Talway | Autorin</title>
+    <title>Arjin Talway | Sprache und Kultur entdecken</title>
 
     <meta name="description"
           content="Arjin Talway – Autorin von Sprache und Kultur entdecken, einem Deutsch-Lernprojekt für A1–A2.">
@@ -14,91 +15,400 @@
     <link rel="canonical"
           href="https://laka35111-debug.github.io/Sprache-und-kultur-entdecken/about.html">
 
+    <link rel="icon"
+          type="image/png"
+          href="images/favicon.png">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "DM Sans", Arial, sans-serif;
+            background: #f6f0e5;
+            color: #08294b;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+
+        header {
+            height: 86px;
+            background: #0b1a2a;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-inner {
+            width: min(1120px, 90%);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 78px;
+            height: 52px;
+            object-fit: contain;
+            background: white;
+        }
+
+        nav {
+            display: flex;
+            gap: 34px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: 0.2s;
+        }
+
+        nav a:hover {
+            color: #e8c45a;
+        }
+
+        /* MAIN */
+
+        main {
+            width: min(1120px, 90%);
+            margin: auto;
+        }
+
+        .author-section {
+            min-height: 590px;
+            display: flex;
+            align-items: center;
+            padding: 70px 0;
+        }
+
+        .author-card {
+            width: 100%;
+            background: #fffaf1;
+            border-radius: 24px;
+            padding: 65px 75px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 18px 45px rgba(8, 41, 75, 0.10);
+            border: 1px solid rgba(8, 41, 75, 0.08);
+        }
+
+        /* decorative shapes */
+
+        .circle-one {
+            position: absolute;
+            width: 230px;
+            height: 230px;
+            border-radius: 50%;
+            background: rgba(197, 48, 48, 0.07);
+            top: -100px;
+            right: -70px;
+        }
+
+        .circle-two {
+            position: absolute;
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            background: rgba(36, 117, 73, 0.08);
+            bottom: -80px;
+            left: -60px;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            max-width: 820px;
+        }
+
+        .label {
+            color: #c53030;
+            letter-spacing: 3px;
+            font-size: 12px;
+            font-weight: 800;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: clamp(42px, 6vw, 68px);
+            line-height: 1;
+            margin-bottom: 25px;
+            color: #08294b;
+        }
+
+        .intro {
+            font-size: 19px;
+            line-height: 1.75;
+            max-width: 760px;
+            color: #29445e;
+            margin-bottom: 28px;
+        }
+
+        .highlight {
+            color: #c53030;
+            font-weight: 700;
+        }
+
+        /* PROJECT BOX */
+
+        .project-box {
+            margin-top: 35px;
+            padding: 25px 28px;
+            border-left: 4px solid #247549;
+            background: #f1eadc;
+            border-radius: 0 14px 14px 0;
+        }
+
+        .project-box h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 25px;
+            margin-bottom: 9px;
+            color: #08294b;
+        }
+
+        .project-box p {
+            color: #40576c;
+            line-height: 1.65;
+        }
+
+        /* DETAILS */
+
+        .details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .tag {
+            padding: 10px 17px;
+            border-radius: 30px;
+            background: #08294b;
+            color: white;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .tag.red {
+            background: #c53030;
+        }
+
+        .tag.green {
+            background: #247549;
+        }
+
+        /* BUTTON */
+
+        .back-button {
+            display: inline-flex;
+            margin-top: 35px;
+            padding: 15px 25px;
+            border-radius: 40px;
+            background: #e8c45a;
+            color: #08294b;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.25s;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #071725;
+            color: #8ea2b5;
+            padding: 38px 0;
+        }
+
+        .footer-inner {
+            width: min(1120px, 90%);
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 13px;
+        }
+
+        .footer-inner strong {
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                height: 75px;
+            }
+
+            .logo {
+                width: 65px;
+                height: 45px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .author-section {
+                padding: 35px 0;
+            }
+
+            .author-card {
+                padding: 40px 28px;
+                border-radius: 18px;
+            }
+
+            h1 {
+                font-size: 44px;
+            }
+
+            .intro {
+                font-size: 16px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Arjin Talway",
       "url": "https://laka35111-debug.github.io/Sprache-und-kultur-entdecken/about.html",
-      "jobTitle": "Author",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Sprache und Kultur entdecken"
-      }
+      "jobTitle": "Author"
     }
     </script>
 
-    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <div class="container header-inner">
-        <a href="index.html" class="brand">
-            <img src="images/logo.png"
-                 class="logo-image"
-                 alt="Sprache und Kultur entdecken Logo">
+
+    <div class="header-inner">
+
+        <a href="index.html">
+            <img
+                src="images/logo.png"
+                class="logo"
+                alt="Sprache und Kultur entdecken">
         </a>
 
         <nav>
-            <a href="index.html">Startseite</a>
-            <a href="index.html#about">Über das Buch</a>
+            <a href="index.html">Homepage</a>
+            <a href="index.html#about">About the book</a>
         </nav>
+
     </div>
+
 </header>
+
 
 <main>
 
-<section class="about section">
-    <div class="container">
+    <section class="author-section">
 
-        <div class="section-label">
-            ÜBER DIE AUTORIN
+        <div class="author-card">
+
+            <div class="circle-one"></div>
+            <div class="circle-two"></div>
+
+            <div class="content">
+
+                <div class="label">
+                    ABOUT THE AUTHOR
+                </div>
+
+                <h1>
+                    Arjin Talway
+                </h1>
+
+                <p class="intro">
+                    <span class="highlight">Arjin Talway</span> is the author of
+                    <strong>“Sprache und Kultur entdecken”</strong>,
+                    a German learning project for levels A1–A2.
+                </p>
+
+                <p class="intro">
+                    The project combines learning the German language
+                    with cultural insights into Germany and Kurdistan.
+                </p>
+
+
+                <div class="project-box">
+
+                    <h2>
+                        Sprache und Kultur entdecken
+                    </h2>
+
+                    <p>
+                        The project includes a book and a companion
+                        learning website with audio texts, dialogues,
+                        vocabulary, grammar and exercises.
+                    </p>
+
+                </div>
+
+
+                <div class="details">
+
+                    <span class="tag red">Author</span>
+                    <span class="tag green">Deutsch A1–A2</span>
+                    <span class="tag">Germany 🇩🇪</span>
+                    <span class="tag">Kurdistan 🌿</span>
+
+                </div>
+
+
+                <a href="index.html" class="back-button">
+                    ← Back to homepage
+                </a>
+
+            </div>
+
         </div>
 
-        <h1>
-            Arjin Talway
-        </h1>
-
-        <p>
-            Arjin Talway ist die Autorin von
-            <strong>„Sprache und Kultur entdecken“</strong>,
-            einem Deutsch-Lernprojekt für die Niveaustufen A1–A2.
-        </p>
-
-        <p>
-            Das Projekt verbindet das Lernen der deutschen Sprache
-            mit Einblicken in Deutschland und Kurdistan.
-        </p>
-
-        <h2>
-            Sprache und Kultur entdecken
-        </h2>
-
-        <p>
-            Das Projekt umfasst ein Buch und eine begleitende
-            Lernwebsite mit Hörtexten, Dialogen, Wortschatz,
-            Grammatik und Übungen.
-        </p>
-
-        <p>
-            <strong>Autorin:</strong> Arjin Talway
-        </p>
-
-        <a href="index.html" class="btn btn-primary">
-            ← Zur Startseite
-        </a>
-
-    </div>
-</section>
+    </section>
 
 </main>
 
+
 <footer>
-    <div class="container footer-bottom">
-        <p>© 2026 Arjin Talway · Sprache und Kultur entdecken</p>
+
+    <div class="footer-inner">
+
+        <span>
+            © 2026 <strong>Arjin Talway</strong>
+        </span>
+
+        <span>
+            Sprache und Kultur entdecken
+        </span>
+
     </div>
+
 </footer>
 
 </body>
